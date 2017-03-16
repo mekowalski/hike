@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170316173439) do
+ActiveRecord::Schema.define(version: 20170316210342) do
 
   create_table "hikers", force: :cascade do |t|
     t.string   "provider"
-    t.string   "uid"
+    t.integer  "uid"
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
