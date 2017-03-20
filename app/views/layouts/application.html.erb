@@ -13,6 +13,7 @@
     <br><br>
     <% if current_hiker %>
       Hello <%= current_hiker.name %>
+      <%= link_to "Sign Out", signout_path %>
     <% else %>
       <%= link_to "sign in with github!", "/auth/github" %>
     <% end %>
