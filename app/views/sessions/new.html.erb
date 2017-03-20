@@ -1,0 +1,33 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sign In!</title>
+  </head>
+  <body>
+    <% if current_hiker %>
+      Hello <%= current_hiker.name %>
+      <%= link_to "Sign Out", signout_path %>
+    <% else %>
+      <%= link_to "sign in with github!", "/auth/github" %>
+    <% end %>
+  </body>
+</html> -->
+
+<h1>Sign Up!</h1>
+
+<%= form_for @hiker do |f| %>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
