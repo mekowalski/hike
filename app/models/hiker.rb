@@ -5,8 +5,7 @@ class Hiker < ApplicationRecord
 
   has_secure_password
   validates_confirmation_of :password
-  validates_presence_of :password
-  validates_presence_of :email
+  validates :email, presence: true, uniqueness: true
 
   def self.create_with_omniauth(auth)
     create! do |hiker|

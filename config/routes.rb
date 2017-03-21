@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   # root 'application#home'
-  root 'sessions#new'
+  root 'hikers#new'
 
-  get '/signup' => 'sessions#new', :as => :signup
-  get '/signin' => 'sessions#new'
+  get '/signup' => 'hikers#new', :as => 'signup'
+  get '/signin' => 'sessions#new', :as => 'signin'
+  get '/signout' => 'sessions#destroy', :as => 'signout'
   get '/auth/:provider/callback' => 'sessions#create'
-  get '/signout' => 'sessions#destroy', :as => :signout
 
   resources :hikers
-
+  resources :sessions
 end
