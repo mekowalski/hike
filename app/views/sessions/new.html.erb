@@ -1,20 +1,13 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Sign In!</title>
-  </head>
-  <body>
-    <% if current_hiker %>
-      Hello <%= current_hiker.name %>
-      <%= link_to "Sign Out", signout_path %>
-    <% else %>
-      <%= link_to "sign in with github!", "/auth/github" %>
-    <% end %>
-  </body>
-</html> -->
-
-<!-- need a new session, such as sign in view
-new user sign up -->
-
 <h1>Sign In!</h1>
+
+<%= form_tag sessions_path do %>
+  <p>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email, params[:email] %>
+  </p>
+  <p>
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password %>
+  </p>
+  <p class="button"><%= submit_tag "Sign in" %></p>
+<% end %>

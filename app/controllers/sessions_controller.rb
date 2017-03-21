@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   def new
   end
-  
+
   def create
     auth = request.env['omniauth.auth']
     hiker = Hiker.find_by_provider_and_uid(auth['provider'], auth['uid']) || Hiker.create_with_omniauth(auth)
