@@ -4,14 +4,11 @@ class HikersController < ApplicationController
   end
 
   def create
-    @hiker = Hiker.new(params.require(:hiker).permit(:email, :password, :password_confirmation))
-    @hiker.save
-    redirect_to root_url, :notice => "Sign up!"
-    # @hiker = Hiker.new(params[:hiker])
-    # if @hiker.save
-    #   redirect_to root_url, :notice => "Signed up!"
-    # else
-    #   render "new"
-    # end
+    @hiker = Hiker.new(params.require(:hiker).permit(:name, :email, :password, :password_confirmation))
+    if @hiker.save
+      redirect_to root_url, :notice => "Sign up!"
+    else
+      render "new"
+    end
   end
 end
