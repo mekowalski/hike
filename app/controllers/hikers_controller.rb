@@ -6,7 +6,8 @@ class HikersController < ApplicationController
   def create
     @hiker = Hiker.new(params.require(:hiker).permit(:name, :email, :password, :password_confirmation))
     if @hiker.save
-      redirect_to root_url, :notice => "Sign up!"
+      session[:hiker_id] = hiker.id
+      redirect_to root_url, :notice => "You're signed up!"
     else
       render "new"
     end
