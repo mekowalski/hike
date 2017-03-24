@@ -1,0 +1,6 @@
+<h1>All the Adventures</h1>
+<ul>
+  <% @adventures.each do |adventure| %>
+  <li><%= link_to adventure.trek_id, adventure_path(adventure) %></li>
+  <% end %>
+</ul>
