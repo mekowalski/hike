@@ -11,6 +11,7 @@
   <body>
     <%= link_to "Sign In", signin_path %> || <%= link_to "Sign Up", signup_path %>
     <br><br>
+    <!-- the conditional isn't showing up once signin w/ gh is successful -->
     <% if current_hiker %>
       Hello <%= current_hiker.email || current_hiker.name %>
       <%= link_to "Sign Out", signout_path %>
