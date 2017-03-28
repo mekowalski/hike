@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get '/signout' => 'sessions#destroy', :as => 'signout'
   get '/auth/:provider/callback' => 'sessions#create'
 
-  resources :hikers, only: [:new, :create]
+  resources :hikers
   resources :sessions, only: [:new, :create, :destroy]
   resources :adventures
   resources :treks
