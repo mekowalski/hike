@@ -1,0 +1,6 @@
+<h1>All Treks!</h1>
+<ul>
+  <%= @treks.each do |trek| %>
+  <li><%= link_to trek.id, trek_path(trek) %></li>
+  <% end %>
+</ul>

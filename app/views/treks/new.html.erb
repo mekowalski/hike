@@ -1,0 +1,9 @@
+<h1>What's your new trek??</h1>
+<%= form_for @trek do |f| %>
+  <%= f.text_field :name %><br>
+  <%= f.text_field :state %><br>
+  <%= f.text_field :elevation %>feet<br>
+  <%= f.text_field :level %><br>
+
+  <%= f.submit :style %>
+<% end %>

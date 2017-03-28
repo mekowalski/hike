@@ -1,4 +1,8 @@
 class TreksController < ApplicationController
+  def index
+    @treks = Trek.all
+  end
+
   def new
     @trek = Trek.new
   end
