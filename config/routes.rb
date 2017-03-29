@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'application#home'
   # root 'hikers#new'
+  # root 'adventures#index'
 
   get '/signup' => 'hikers#new', :as => 'signup'
   post '/hikers' => 'hikers#create'
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback' => 'sessions#create'
 
   resources :hikers
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions
   resources :adventures
   resources :treks
 end
