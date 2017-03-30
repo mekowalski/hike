@@ -2,6 +2,9 @@ class SessionsController < ApplicationController
   def new
   end
 
+#create is signing in the user but not giving notice,
+#and gh auth is working but not stating the 'hello' part in the application
+#also when gh auth does work, it just brings up the signin form
   def create
     hiker = Hiker.find_by(email: params[:email])
     if hiker && hiker.authenticate(params[:password])

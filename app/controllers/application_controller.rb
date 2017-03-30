@@ -6,8 +6,6 @@ class ApplicationController < ActionController::Base
     render 'layouts/home'
   end
 
-  private
-
   def current_hiker
     @current_hiker ||= Hiker.find(session[:hiker_id]) if session[:hiker_id]
   end

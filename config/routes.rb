@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root 'application#home'
+  # root 'application#home'
   # root 'hikers#new'
-  # root 'adventures#index'
+  root 'adventures#index'
 
   get '/signup' => 'hikers#new', :as => 'signup'
   post '/hikers' => 'hikers#create'
