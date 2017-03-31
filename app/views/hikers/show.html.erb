@@ -1,0 +1,13 @@
+<h1><%= @hiker.name %></h1>
+
+<ul>
+  <%= @treks.each do |trek| %>
+  <li><%= @trek.name %></li>
+  <li><%= @trek.state %></li>
+  <li><%= @trek.elevation %></li>
+  <li><%= @trek.level %></li>
+  <% end %>
+</ul>
+
+
+<p><%= link_to "Adventures Page", adventures_url %></p>
