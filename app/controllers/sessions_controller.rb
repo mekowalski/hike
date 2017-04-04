@@ -36,13 +36,12 @@ class SessionsController < ApplicationController
     if hiker && hiker.authenticate(params[:password])
       session[:hiker_id] = hiker.id
       redirect_to adventures_url :notice => "You're signed in!"
-    elsif
-      render "new"
-    else
-      auth = request.env['omniauth.auth']
+    elsif auth = request.env['omniauth.auth']
       hiker = Hiker.find_by_provider_and_uid(auth['provider'], auth['uid']) || Hiker.create_with_omniauth(auth)
       session[:hiker_id] = hiker.id
       redirect_to adventures_url, :notice => "Signed in!"
+    else
+      render "new"
     end
   end
 
