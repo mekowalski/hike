@@ -11,7 +11,8 @@ class Hiker < ApplicationRecord
     create! do |hiker|
       hiker.provider = auth['provider']
       hiker.uid = auth['uid']
-      hiker.name = auth['info']['name']
+      hiker.email = auth['info']['email']
+      hiker.password = SecureRandom.hex
     end
   end
 end
