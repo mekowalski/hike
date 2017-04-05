@@ -3,13 +3,9 @@
 <% if @hiker.treks != nil %>
 <ul>
   <% @treks.each do |trek| %>
-  <li><%= trek.name %></li>
-  <li><%= trek.state %></li>
-  <li><%= trek.elevation %></li>
-  <li><%= trek.level %></li>
+  <li><%= link_to trek.name, hiker_trek_url(current_hiker.id, trek.id) %></li>
   <% end %>
 </ul>
 <% end %>
 
-
-<p><%= link_to "Adventures Page", adventures_url %></p>
+<p><%= link_to "Adventures Page", hiker_adventures_path(current_hiker.id) %></p>

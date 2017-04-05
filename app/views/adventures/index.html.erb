@@ -1,12 +1,9 @@
 <h1>All Adventures!</h1>
 
-
-this page i want all the adventures that have either the trek name or hiker name indexed as such:
-
 <% @hikers.each do |hiker| %>
 <li><%= link_to hiker.name, hiker_path(hiker.id) %></li>
 <% end %>
 
-<p><%= link_to "Create a new Adventure!", new_trek_url %></p>
+<p><%= link_to "Create a new Adventure!", new_hiker_adventure_url(current_hiker.id) %></p>
 <p>or</p>
-<p><%= link_to "view all treks", treks_url%></p>
+<p><%= link_to "view all treks", hiker_treks_url(current_hiker.id)%></p>

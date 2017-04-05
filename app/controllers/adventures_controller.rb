@@ -8,7 +8,7 @@ class AdventuresController < ApplicationController
   end
 
   def create
-    @adventure = Adventure.new(params.require(:adventure).permit(:hiker_id, :trek_id))
+    @adventure = Adventure.new(params.require(:adventure).permit(:title))
     @adventure.save
     redirect_to adventure_path(@adventure)
   end

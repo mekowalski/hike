@@ -8,9 +8,9 @@ class TreksController < ApplicationController
   end
 
   def create
-    @trek = Trek.new(params.require(:trek).permit(:name, :state, :elevation, :level))
+    @trek = Trek.new(params.require(:trek).permit(:name, :state, :elevation, :level, :adventure_id, :hiker_id))
     @trek.save
-    redirect_to trek_path(@trek)
+    redirect_to hiker_trek_path(current_hiker.id, trek.id)
   end
 
   def show

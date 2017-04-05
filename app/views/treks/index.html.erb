@@ -1,8 +1,8 @@
 <h1>All Treks!</h1>
 <ul>
   <% @treks.each do |trek| %>
-  <li><%= link_to trek.name, trek_path(trek) %></li>
+  <li><%= link_to trek.name, hiker_trek_path(current_hiker.id, trek.id) %></li>
   <% end %>
 </ul>
 <br><br>
-<p><%= link_to "Adventures Page", adventures_url %></p>
+<p><%= link_to "Adventures Page", hiker_adventures_path(current_hiker.id) %></p>

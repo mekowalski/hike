@@ -16,5 +16,5 @@
   <%= f.text_field :level %>
   <br><br>
 
-  <%= f.submit %> || <%= link_to "Cancel", adventures_url %>
+  <%= f.submit %> || <%= link_to "Cancel", hiker_adventures_path(current_hiker.id) %>
 <% end %>
