@@ -13,8 +13,7 @@
 ActiveRecord::Schema.define(version: 20170320185117) do
 
   create_table "adventures", force: :cascade do |t|
-    t.integer  "hiker_id"
-    t.integer  "trek_id"
+    t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -34,8 +33,10 @@ ActiveRecord::Schema.define(version: 20170320185117) do
     t.string   "state"
     t.integer  "elevation"
     t.string   "level"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "hiker_id"
+    t.integer  "adventure_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end

@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+counter = 0
+5.times do
+  counter += 1
+  Hiker.create[name: 'hiker' + "#{counter}", email: 'hiker' + "#{counter}" + "@email.com", password: 'hiker' + "#{counter}"]
+end

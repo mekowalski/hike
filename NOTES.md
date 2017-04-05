@@ -20,3 +20,15 @@ WEDNESDAY
 -watch todo-authentication & todo-omniauth
 -finish signup(form), signin(form) & signout
 'i got this. no distractions just fun with code'
+
+WEDNESDAY
+writer(hiker) has many journals
+writer has many entries through journals
+
+journal(adventure) has many entries
+
+entries(trek) belong to journal
+entries belong to writer
+
+-AR scope method
+-nested form that writes to an associated model through a custom attribute writer

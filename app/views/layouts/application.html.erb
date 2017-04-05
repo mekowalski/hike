@@ -10,7 +10,7 @@
 
   <body>
     <% if current_hiker %>
-      Hello <%= current_hiker.email || current_hiker.name %>
+      Hello <%= current_hiker.name || current_hiker.email %>
       <%= link_to "Sign Out", signout_path %>
     <% else %>
     <%= link_to "Sign In", signin_path %> || <%= link_to "Sign Up", signup_path %> || <%= link_to "Sign in with Github!", "/auth/github" %>

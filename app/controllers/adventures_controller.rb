@@ -1,6 +1,6 @@
 class AdventuresController < ApplicationController
   def index
-    @adventures = Adventure.all
+    @hikers = Hiker.all
   end
 
   def new
