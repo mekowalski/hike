@@ -32,3 +32,10 @@ entries belong to writer
 
 -AR scope method
 -nested form that writes to an associated model through a custom attribute writer
+
+THURSDAY
+-show checkboxes of existing adventure for new trek creation
+
+current hiker and exiting hikers
+-show all adventures of specific hiker
+-show all treks of specific hiker

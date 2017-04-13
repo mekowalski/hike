@@ -23,14 +23,7 @@
     <%= adventure.text_field :title %>
   <% end %>
 
-  <%= f.submit %> || <%= link_to "Cancel", hiker_adventures_path(current_hiker.id) %>
+  <%= f.submit %>
+  <br><br>
+  <%= link_to "Cancel", hiker_adventures_path(current_hiker.id) %>
 <% end %>
-
-<!--
-1. i can make a new trek under and existing adventure
-example: i went on another canoe trip and would record that under the canoe adventure
-
-2. or i can create a new advenutre with a new log of a new trek for that adventure
-example: i went on my first mountain bike trip and would create a new adventure for mountain biking
-and attach that new trek to that adventure
--->
