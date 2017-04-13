@@ -17,12 +17,10 @@
   <br><br>
 
   <%= f.label "Choose existing adventure or create a new adventure"%>
-  <%= f.collection_check_boxes :adventure_ids, current_hiker.adventures, :id, :title %>
   <br><br>
 
-  <%= f.fields_for :adventures, @trek.adventures.build do |adventure| %>
-
-    <%= adventures.text_field :title %>
+  <%= f.fields_for :adventure do |adventure| %>
+    <%= adventure.text_field :title %>
   <% end %>
 
   <%= f.submit %> || <%= link_to "Cancel", hiker_adventures_path(current_hiker.id) %>
