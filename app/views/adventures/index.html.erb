@@ -1,4 +1,5 @@
 <h1>All Adventures!</h1>
+<p>view all your adventures</p>
 
 <% @hikers.each do |hiker| %>
 <li><%= link_to hiker.name, hiker_path(hiker.id) %></li>
