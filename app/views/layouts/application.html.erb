@@ -13,10 +13,9 @@
       Hello <%= current_hiker.name || current_hiker.email %>
       <%= link_to "Sign Out", signout_path %>
       <br><br>
-      <%= link_to "View all your adventures" %>
-       <!-- not certain which, i want link to direct to index of current_hiker adventures then those links to direct to all the treks attached to those adventure -->
+      <%= link_to "View all your adventures", hiker_adventure_path(current_hiker.id, adventure.id) %>
     <% else %>
-    <%= link_to "Sign In", signin_path %> || <%= link_to "Sign Up", signup_path %> || <%= link_to "Sign in with Github!", "/auth/github" %>
+      <%= link_to "Sign In", signin_path %> || <%= link_to "Sign Up", signup_path %> || <%= link_to "Sign in with Github!", "/auth/github" %>
     <% end %>
     <br><br>
 
