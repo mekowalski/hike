@@ -1,10 +1,8 @@
 <h1>All Adventures!</h1>
 <p>view all your adventures</p>
 
-<% @hikers.each do |hiker| %>
-<li><%= link_to hiker.name, hiker_path(hiker.id) %></li>
+<% @adventures.each do |adventure| %>
+  <li><%= link_to adventure.title, hiker_adventure_path(adventure.hiker_adventure.id, adventure.id) %></li>
 <% end %>
 
-<p><%= link_to "Create a new Trek!", new_hiker_trek_url(current_hiker.id) %></p>
-<p>or</p>
-<p><%= link_to "view all treks", hiker_treks_url(current_hiker.id)%></p>
+<!-- click on the link that has advenute title, then from there we can see all the treks associated with that adventure -->

@@ -1,6 +1,6 @@
 class AdventuresController < ApplicationController
   def index
-    @hikers = Hiker.all
+    @adventures = Adventure.all
   end
 
   def new
@@ -15,6 +15,6 @@ class AdventuresController < ApplicationController
 
   def show
     # to show all the adventures of 1 hiker
-    @adventures = Adeventure.find(params[:id])
+    @adventures = Adventure.find(params[:id])
   end
 end
