@@ -1,9 +1,9 @@
-<h1><%= @hiker.name %></h1>
+<h1><%= @hiker.name || @hiker.email %>'s Treks</h1>
 
-<% if @hiker.treks != nil %>
+<% if @hiker.adventures != nil %>
 <ul>
-  <% @treks.each do |trek| %>
-  <li><%= link_to trek.name, hiker_trek_url(current_hiker.id, trek.id) %></li>
+  <% @adventures.each do |adventure| %>
+  <li><%= link_to adventure.title, hiker_adventure_path(current_hiker.id, adventure.id) %></li>
   <% end %>
 </ul>
 <% end %>

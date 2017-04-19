@@ -17,6 +17,6 @@ class HikersController < ApplicationController
     #from the user's homepage i want to be able to click on a link that says
     #'view all your adventures' and it will SHOW all the treks a hiker has created and done
     @hiker = Hiker.find(params[:id])
-    @treks = @hiker.treks
+    @adventures = @hiker.adventures
   end
 end

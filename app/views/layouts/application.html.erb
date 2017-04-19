@@ -13,14 +13,16 @@
       Hello <%= current_hiker.name || current_hiker.email %>
       <%= link_to "Sign Out", signout_path %>
       <br><br>
-      <%= link_to "View all your adventures", hiker_adventures_path(current_hiker.id) %>
+      <%= link_to "View all your adventures", hiker_path(current_hiker.id) %>
     <% else %>
       <%= link_to "Sign In", signin_path %> || <%= link_to "Sign Up", signup_path %> || <%= link_to "Sign in with Github!", "/auth/github" %>
     <% end %>
     <br><br>
 
     <img src="/mtns.jpg">
+    <% if !current_hiker %>
     <h1>welcome to the hiker app</h1>
+    <% end %>
     <%= yield %>
   </body>
 </html>
