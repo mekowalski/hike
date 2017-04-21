@@ -5,5 +5,3 @@
 <p>Level of Difficulty: <%= @trek.level %></p>
 
 <p><%= link_to @trek.hiker.name || @trek.hiker.email, hiker_path(@trek.hiker.id) %> has done this trek</p>
-
-<p><%= link_to "Adventures Page", hiker_adventures_path(current_hiker.id) %></p>

@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_hiker
 
   def home
-    render 'layouts/home'
+    render 'layouts/application'
   end
 
   def current_hiker
