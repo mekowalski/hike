@@ -39,3 +39,9 @@ THURSDAY
 current hiker and exiting hikers
 -show all adventures of specific hiker
 -show all treks of specific hiker
+
+THURSDAY
+-work on design of app
+-in layout/application or stylesheets/application
+
+maybe do video walk through
