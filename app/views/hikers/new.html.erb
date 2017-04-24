@@ -1,10 +1,12 @@
-<h1>Sign Up!</h1>
+<h1>Sign Up</h1>
 
 <%= form_for @hiker do |f| %>
   <% if @hiker.errors.any? %>
     <h2>Form is invalid</h2>
       <ul>
-        <% for message in @hiker.errors.full_messages %>
+        <!-- error messages still not working
+        need to use field_with_errors -->
+        <% @hiker.errors.full_messages do |message| %>
         <li><%= message %></li>
       <% end %>
     </ul>
@@ -20,7 +22,7 @@
   <p>
     <%= f.password_field :password, placeholder: "Password please" %>
   </p>
-  
+
   <p>
     <%= f.password_field :password_confirmation, placeholder: "Please confirm your password" %>
   </p>
