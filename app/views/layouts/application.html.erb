@@ -76,7 +76,7 @@
         <% end %>
       </ul>
     </div>
-    
+
   </div>
 </nav>
 
@@ -85,9 +85,8 @@
     <div class="col-sm-4 sidenav">
       <% if !current_hiker %>
       <h1>Welcome to the Hiker App!</h1>
-      <% else %>
-      <%= yield %>
       <% end %>
+      <%= yield %>
     </div>
 
     <div class="col-sm-8 text-left">
