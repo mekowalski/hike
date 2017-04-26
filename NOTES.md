@@ -44,4 +44,8 @@ THURSDAY
 -work on design of app
 -in layout/application or stylesheets/application
 
-maybe do video walk through
+WEDNESDAY
+-PLEASE FIGURE OUT ERROR DISPLAY
+-fix main page double layout incident
+-maybe do video walk through
+-maybe blog post

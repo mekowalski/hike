@@ -1,5 +1,4 @@
 class Hiker < ApplicationRecord
-  #figure out join table
   has_many :treks
   has_many :adventures, through: :treks
 

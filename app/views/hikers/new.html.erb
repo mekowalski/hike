@@ -11,20 +11,13 @@
     </ul>
   </div>
   <% end %>
-  <p>
-    <%= f.text_field :name, placeholder: "What's your name?"%>
-  </p>
+  <p><%= f.text_field :name, placeholder: "What's your name?"%></p>
+  
+  <p><%= f.text_field :email, placeholder: "Sign up with your email"%></p>
 
-  <p>
-    <%= f.text_field :email, placeholder: "Sign up with your email"%>
-  </p>
+  <p><%= f.password_field :password, placeholder: "Password please" %></p>
 
-  <p>
-    <%= f.password_field :password, placeholder: "Password please" %>
-  </p>
+  <p><%= f.password_field :password_confirmation, placeholder: "Please confirm password" %></p>
 
-  <p>
-    <%= f.password_field :password_confirmation, placeholder: "Please confirm password" %>
-  </p>
   <p><%= f.submit %></p>
 <% end %>
