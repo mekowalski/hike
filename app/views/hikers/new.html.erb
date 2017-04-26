@@ -2,12 +2,11 @@
 
 <%= form_for @hiker do |f| %>
   <% if @hiker.errors.any? %>
+  <!-- div addition -->
   <div class="field_with_errors">
-
     <h2>Form is invalid</h2>
       <ul>
-        <!-- error messages still not working
-        need to use field_with_errors -->
+        <!-- errors are still not showing. also the css is showing up in one field -->
         <% @hiker.errors.full_messages do |message| %>
         <li><%= message %></li>
       <% end %>
@@ -34,7 +33,7 @@
 
   <p>
     <div class="field<%= 'field_with_errors' if @hiker.errors[:password].any? %>">
-      <%= f.password_field :password_confirmation, placeholder: "Please confirm your password" %>
+      <%= f.password_field :password_confirmation, placeholder: "Please confirm password" %>
     </div>
   </p>
   <p><%= f.submit %></p>
