@@ -1,5 +1,9 @@
 <h1>Sign In</h1>
 
+<% if flash[:error] %>
+<p><%= flash[:error] %></p>
+<% end %>
+
 <%= form_tag sessions_path do %>
   <p>
     <%= label_tag :email %><br />
@@ -10,4 +14,5 @@
     <%= password_field_tag :password %>
   </p>
   <p class="button"><%= submit_tag "Sign in" %></p>
+
 <% end %>

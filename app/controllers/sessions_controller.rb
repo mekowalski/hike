@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
       session[:hiker_id] = hiker.id
       redirect_to hiker_adventures_path(current_hiker.id), :notice => "Signed in!"
     else
+      hiker.nil? ? (flash[:error] = 'User not found') : (flash[:error] = 'Invalid password')
       render "new"
     end
   end

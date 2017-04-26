@@ -2,39 +2,29 @@
 
 <%= form_for @hiker do |f| %>
   <% if @hiker.errors.any? %>
-  <!-- div addition -->
   <div class="field_with_errors">
     <h2>Form is invalid</h2>
       <ul>
-        <!-- errors are still not showing. also the css is showing up in one field -->
-        <% @hiker.errors.full_messages do |message| %>
+        <% @hiker.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
     </ul>
   </div>
   <% end %>
   <p>
-    <div class="field<%= ' field_with_errors' if @hiker.errors[:name].any? %>">
-      <%= f.text_field :name, placeholder: "What's your name?"%>
-    </div>
+    <%= f.text_field :name, placeholder: "What's your name?"%>
   </p>
 
   <p>
-    <div class="field<%= ' field_with_errors' if @hiker.errors[:email].any? %>">
-      <%= f.text_field :email, placeholder: "Sign up with your email"%>
-    </div>
+    <%= f.text_field :email, placeholder: "Sign up with your email"%>
   </p>
 
   <p>
-    <div class="field<%= 'field_with_errors' if @hiker.errors[:password].any? %>">
-      <%= f.password_field :password, placeholder: "Password please" %>
-    </div>
+    <%= f.password_field :password, placeholder: "Password please" %>
   </p>
 
   <p>
-    <div class="field<%= 'field_with_errors' if @hiker.errors[:password].any? %>">
-      <%= f.password_field :password_confirmation, placeholder: "Please confirm password" %>
-    </div>
+    <%= f.password_field :password_confirmation, placeholder: "Please confirm password" %>
   </p>
   <p><%= f.submit %></p>
 <% end %>
