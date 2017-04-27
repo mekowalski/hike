@@ -4,20 +4,25 @@
   <% if @hiker.errors.any? %>
   <div class="field_with_errors">
     <h2>Form is invalid</h2>
-      <ul>
-        <% @hiker.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+    <ul>
+      <% @hiker.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
       <% end %>
     </ul>
   </div>
   <% end %>
-  <p><%= f.text_field :name, placeholder: "What's your name?"%></p>
-  
-  <p><%= f.text_field :email, placeholder: "Sign up with your email"%></p>
 
-  <p><%= f.password_field :password, placeholder: "Password please" %></p>
+  <%= label_tag :name %>
+  <p><%= f.text_field :name %></p>
 
-  <p><%= f.password_field :password_confirmation, placeholder: "Please confirm password" %></p>
+  <%= label_tag :email %>
+  <p><%= f.text_field :email %></p>
 
-  <p><%= f.submit %></p>
+  <%= label_tag :password %>
+  <p><%= f.password_field :password %></p>
+
+  <%= label_tag :password_confirmation %>
+  <p><%= f.password_field :password_confirmation %></p>
+
+  <p class="button"><%= submit_tag "Sign Up" %></p>
 <% end %>
