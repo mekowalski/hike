@@ -1,6 +1,10 @@
 class AdventuresController < ApplicationController
   def index
     @adventures = Adventure.all
+    respond_to do |f|
+      f.html #respond w/ normal html
+      f.json {render json: @adventures} #WORKS SUCCESSFULLY IN BROWSER!!!!
+    end
   end
 
   def new
