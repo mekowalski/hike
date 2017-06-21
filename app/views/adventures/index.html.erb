@@ -1,5 +1,9 @@
-<h1>All Adventures</h1>
+<div class="main">
+  <h1>All Adventures</h1>
 
-<% @adventures.each do |adventure| %>
-  <p><%= link_to adventure.title, hiker_adventure_path(adventure.hiker_adventure.id, adventure.id) %></p>
-<% end %>
+  <div class="all-adventures">
+    <% @adventures.each do |adventure| %>
+      <p><%= link_to adventure.title, hiker_adventure_path(adventure.hiker_adventure.id, adventure.id) %></p>
+    <% end %>
+  </div>
+</div>
