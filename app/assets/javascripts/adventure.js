@@ -1,18 +1,21 @@
 //cannot use fetch, use ajax
+
+//event listener
 $(() => {
   bindClickHandlers()
 })
 
+//pushState allows append of url
 const bindClickHandlers = () => {
   $('.nav-links').on ('click', (e) => {
     e.preventDefault()
-    // this is working, returning objs in console!!
-    $.get('hikers/:id/adventures.json', adventures => {
+    history.pushState(null, null, "/hikers/:hiker_id/adventures")
+    $.get('hikers/:hiker_id/adventures.json', adventures => {
       $('#main').html('')
       adventures.forEach(adventure => {
-        // console.log(adventure)
         let newAdventure = new Adventure(adventure)
-        console.log(newAdventure)
+        let adventureHtml = newAdventure.formatIndex()
+        $('#main').append(adventureHtml)
       })
     })
   })
@@ -25,9 +28,9 @@ function Adventure(adventure) {
 }
 
 // prototype function
-Adventure.prototype.formatIndex = () => {
+Adventure.prototype.formatIndex = function() {
   let adventureHtml = `
-    <h1>${this.title}</h1>
+    <a href="/adventuress/${this.id}"><h1>${this.title}</h1>
   `
   return adventureHtml
 }

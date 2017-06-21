@@ -19,5 +19,9 @@ class AdventuresController < ApplicationController
 
   def show
     @adventure = Adventure.find(params[:id])
+    respond_to do |f| #working properly when maunually entering direct url
+      f.html
+      f.json {render json: @adventure}
+    end
   end
 end
