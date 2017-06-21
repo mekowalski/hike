@@ -7,7 +7,7 @@ $(() => {
 
 const bindClickHandlers = () => {
   $('.nav-links').on ('click', (e) => {
-    debugger
+    // debugger
     e.preventDefault()
     console.log('hello')
   })
