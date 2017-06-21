@@ -1,7 +1,11 @@
-<h1>All Treks</h1>
+<div class="main">
+  <h1>All Treks</h1>
 
-<ul>
-  <% @treks.each do |trek| %>
-  <p><%= link_to trek.name, hiker_trek_path(current_hiker.id, trek.id) %></p>
-  <% end %>
-</ul>
+  <div class="all-treks">
+    <ul>
+      <% @treks.each do |trek| %>
+      <p><%= link_to trek.name, hiker_trek_path(current_hiker.id, trek.id) %></p>
+      <% end %>
+    </ul>
+  </div>
+</div>

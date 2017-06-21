@@ -1,18 +1,18 @@
 //event listener
 $(() => {
   bindClickHandlers()
+  trekBindClickHandlers()
 })
 
 //pushState allows append of url
 const bindClickHandlers = () => {
-  $('.nav-links').on ('click', function(e){
-    e.preventDefault();
+  $('.all-adventures').on ('click', function(e) {
+    e.preventDefault()
     let id = ($(this).data('id'))
-    // console.log($(this).data('id'));
-    history.pushState(null, null, `/hikers/${id}/adventures`) //not working
+    history.pushState(null, null, `/hikers/${id}/adventures`)
     $.get(`/hikers/${id}/adventures.json`, adventures => {
       $('.main').html('<h1>All Adventures</h1>')
-      console.log(adventures);
+      // console.log(adventures);
       adventures.forEach(adventure => {
         let newAdventure = new Adventure(adventure)
         let adventureHtml = newAdventure.formatIndex()
@@ -20,10 +20,26 @@ const bindClickHandlers = () => {
       })
     })
   })
-  $(document).on('click', ".show-link", function(e) { //include formatShow after get
-    e.preventDefault()
-    let id = e.currentTarget.getAttribute('adventure') //not working
+  // $(document).on('click', ".show-link", function(e) {
+  //   e.preventDefault()
+  //   let id = ($(this).data('id'))
+  // })
+}
 
+const trekBindClickHandlers = () => {
+  $('.all-treks').on ('click', function(e) {
+    e.preventDefault()
+    let id = ($(this).data('id'))
+    history.pushState(null, null, `/hikers/${id}/treks`)
+    $.get(`/hikers/${id}/treks.json`, treks => {
+      $('.main').html('<h1>All Treks</h1>')
+      // console.log(treks);
+      treks.forEach(trek => {
+        let newTrek = new Trek(trek)
+        let TrekHtml = newTrek.formatIndex()
+        $('.main').append(TrekHtml)
+      })
+    })
   })
 }
 
