@@ -1,6 +1,10 @@
 class TreksController < ApplicationController
   def index
     @treks = Trek.all
+    respond_to do |f|
+      f.html
+      f.json {render json: @treks}
+    end
   end
 
   def new
@@ -15,7 +19,7 @@ class TreksController < ApplicationController
   end
 
   def show
-    @trek = Trek.find(params[:id])
+    @trek = Trek.find(params[:id]) #also regarding this line with 404 error
   end
 
   private

@@ -7,9 +7,9 @@ const trekBindClickHandlers = () => {
   $('#all-treks').on ('click', function(e) {
     e.preventDefault()
     let id = ($(this).data('id'))
-    history.pushState(null, null, `/hikers/${id}/treks/${id}`)
+    history.pushState(null, null, `/hikers/${id}/treks/${id}`) //not working
     // debugger
-    $.get(`/hikers/${id}/treks/${id}.json`, treks => {
+    $.get(`/hikers/${id}/treks/${id}.json`, treks => { //not working, 404 error
       debugger
       $('.main').html('<h1>All Treks</h1>')
       // console.log(treks);
