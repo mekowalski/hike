@@ -1,12 +1,11 @@
 //event listener
 $(() => {
-  bindClickHandlers()
-  trekBindClickHandlers()
+  advBindClickHandlers()
 })
 
 //pushState allows append of url
-const bindClickHandlers = () => {
-  $('.all-adventures').on ('click', function(e) {
+const advBindClickHandlers = () => {
+  $('#all-adventures').on ('click', function(e) {
     e.preventDefault()
     let id = ($(this).data('id'))
     history.pushState(null, null, `/hikers/${id}/adventures`)
@@ -24,23 +23,6 @@ const bindClickHandlers = () => {
   //   e.preventDefault()
   //   let id = ($(this).data('id'))
   // })
-}
-
-const trekBindClickHandlers = () => {
-  $('.all-treks').on ('click', function(e) {
-    e.preventDefault()
-    let id = ($(this).data('id'))
-    history.pushState(null, null, `/hikers/${id}/treks`)
-    $.get(`/hikers/${id}/treks.json`, treks => {
-      $('.main').html('<h1>All Treks</h1>')
-      // console.log(treks);
-      treks.forEach(trek => {
-        let newTrek = new Trek(trek)
-        let TrekHtml = newTrek.formatIndex()
-        $('.main').append(TrekHtml)
-      })
-    })
-  })
 }
 
 // constructor function
