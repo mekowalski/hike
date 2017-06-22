@@ -20,7 +20,7 @@ const bindClickHandlers = () => {
       })
     })
   })
-  // $(document).on('click', ".show-link", function(e) {
+  // $(document).on('click', ".show-link", function(e) { //not sure how to build this
   //   e.preventDefault()
   //   let id = ($(this).data('id'))
   // })
@@ -52,14 +52,15 @@ function Adventure(adventure) {
 // prototype function
 Adventure.prototype.formatIndex = function() {
   let adventureHtml = `
-    <a href="/adventures/${this.id}"  data-id="${this.id}" class="show-link"><p>${this.title}</p>
+    <a href="/adventures/${this.id}"  data-id="${this.id}"
+    class="show-link"><p>${this.title}</p>
   `
   return adventureHtml
 }
 
 Adventure.prototype.formatShow = function() {
   let adventureHtml = `
-    <h3>${this.title}</h3
+    <h3>${this.title}</h3>
   `
   return adventureHtml
 }
