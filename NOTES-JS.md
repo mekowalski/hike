@@ -1,5 +1,10 @@
 Daily Commits
 
+June 22 2017, Thursday
+- 4:37PM    + respond_to in trek#index, comments on trek#show id
+- 4:30PM    +trek.js, move trek binding, +trek const & proto funcs
+- 3:35PM    minor changes
+
 June 21 2017, Wednesday
 - 4:40PM    +const trekBindClickHandlers(), +div trek index, +data for link_to, greet issue
 - 3:11PM    pushState url finally working, pause building proto func, correct let id
