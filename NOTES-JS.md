@@ -1,5 +1,9 @@
 Daily Commits
 
+June 26 2017, Monday
+- 10:33AM   + this.id = trek.id, working on previous error still
+- 10:15AM   still working on trek#show, url: hikers/:hiker_id/treks/:id not working
+
 June 22 2017, Thursday
 - 4:37PM    + respond_to in trek#index, comments on trek#show id
 - 4:30PM    +trek.js, move trek binding, +trek const & proto funcs
