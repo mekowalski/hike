@@ -1,5 +1,10 @@
 Daily Commits
 
+June 28 2017, Wednesday
+- 12:14PM   minor change in adventure/trek js files
+- 11:08AM   trek index url working!!
+- 11:01AM   remove class in treks.js, +resources treks
+
 June 26 2017, Monday
 - 10:33AM   + this.id = trek.id, working on previous error still
 - 10:15AM   still working on trek#show, url: hikers/:hiker_id/treks/:id not working
