@@ -6,13 +6,10 @@ $(() => {
 const trekBindClickHandlers = () => {
   $('#all-treks').on ('click', function(e) {
     e.preventDefault()
-    let id = ($(this).data('id')) //here id = 6, which error suggests id=6 not found, 404
-    history.pushState(null, null, `/hikers/${id}/treks/${id}`) //not working
-    // debugger
-    $.get(`/hikers/${id}/treks/${id}.json`, treks => { //not working, 404 error
-      // debugger
+    let id = ($(this).data('id'))
+    history.pushState(null, null, `/treks`) //FINALLY INDEXED!
+    $.get(`/treks.json`, treks => { //FINALLY WORKING!!!
       $('.main').html('<h1>All Treks</h1>')
-      // console.log(treks);
       treks.forEach(trek => {
         let newTrek = new Trek(trek)
         let TrekHtml = newTrek.formatIndex()
