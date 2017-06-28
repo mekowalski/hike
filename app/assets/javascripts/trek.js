@@ -7,8 +7,8 @@ const trekBindClickHandlers = () => {
   $('#all-treks').on ('click', function(e) {
     e.preventDefault()
     let id = ($(this).data('id'))
-    history.pushState(null, null, `/treks`) //FINALLY INDEXED!
-    $.get(`/treks.json`, treks => { //FINALLY WORKING!!!
+    history.pushState(null, null, `/treks`)
+    $.get(`/treks.json`, treks => {
       $('.main').html('<h1>All Treks</h1>')
       treks.forEach(trek => {
         let newTrek = new Trek(trek)

@@ -3,7 +3,6 @@ $(() => {
   advBindClickHandlers()
 })
 
-//pushState allows append of url
 const advBindClickHandlers = () => {
   $('#all-adventures').on ('click', function(e) {
     e.preventDefault()
@@ -11,7 +10,6 @@ const advBindClickHandlers = () => {
     history.pushState(null, null, `/hikers/${id}/adventures`)
     $.get(`/hikers/${id}/adventures.json`, adventures => {
       $('.main').html('<h1>All Adventures</h1>')
-      // console.log(adventures);
       adventures.forEach(adventure => {
         let newAdventure = new Adventure(adventure)
         let adventureHtml = newAdventure.formatIndex()
