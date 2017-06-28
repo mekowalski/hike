@@ -8,7 +8,7 @@ const trekBindClickHandlers = () => {
     e.preventDefault()
     let id = ($(this).data('id')) //here id = 6, which error suggests id=6 not found, 404
     history.pushState(null, null, `/hikers/${id}/treks/${id}`) //not working
-    debugger
+    // debugger
     $.get(`/hikers/${id}/treks/${id}.json`, treks => { //not working, 404 error
       // debugger
       $('.main').html('<h1>All Treks</h1>')
@@ -45,11 +45,11 @@ Trek.prototype.formatIndex = function() {
 Trek.prototype.formatShow = function() {
   let trekHtml = `
     <h3>${this.name}</h3>
-    class="show-link"><p>${this.state}</p>
-    class="show-link"><p>${this.elevation}</p>
-    class="show-link"><p>${this.level}</p>
-    class="show-link"><p>${this.hiker_id}</p>
-    class="show-link"><p>${this.adventure_id}</p>
+    <p>${this.state}</p>
+    <p>${this.elevation}</p>
+    <p>${this.level}</p>
+    <p>${this.hiker_id}</p>
+    <p>${this.adventure_id}</p>
   `
   return trekHtml
 }
