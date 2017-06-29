@@ -19,8 +19,7 @@ class TreksController < ApplicationController
   end
 
   def show
-    @trek = Trek.find(params[:id]) #this line still not correct, not finding trek id?
-    #@trek => nil in console, :id.nil? => false
+    @trek = Trek.find(params[:id])
     respond_to do |f|
       f.html
       f.json {render json: @trek}
