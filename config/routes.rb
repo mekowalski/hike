@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :treks
     resources :adventures
   end
-  resources :treks
+  resources :adventures #redundant but works
+  resources :treks #redundant but works
   resources :sessions
 end
