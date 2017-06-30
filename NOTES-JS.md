@@ -1,5 +1,8 @@
 Daily Commits
 
+June 30 2017, Friday
+- 10:36AM   working on click event for show
+
 June 29 2017, Thursday
 - 10:18PM   moved h1 to welcome.html, mod adventure proto & const func
 - 2:39PM    /adventures/:id works but not nested, h1 still present instead of replacement
