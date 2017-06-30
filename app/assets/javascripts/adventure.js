@@ -17,15 +17,21 @@ const advBindClickHandlers = () => {
       })
     })
   })
-  // $(document).on('click', ".show-link", function(e) { //not sure how to build this
+  $(document).on('click', ".show-link", function(e) {
+    e.preventDefault()
+    let id = $(this).attr('data-id')
+    $.get(`/hikers/${id}/adventures/${id}.json`)
+  })
+
+  // $(document).on('click', ".show-link", function(e) { //not allowing specific link to show
   //   e.preventDefault()
   //   let id = ($(this).data('id'))
-  // })  show specific adventure, preventDefault()
+  // })  //show specific adventure, preventDefault()
 }
 
 // constructor function
 function Adventure(adventure) {
-  console.log(adventure.treks.length);
+  // console.log(adventure.treks.length);
   this.id = adventure.id
   this.title = adventure.title
   this.treks = adventure.treks
