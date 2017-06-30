@@ -20,20 +20,22 @@ const advBindClickHandlers = () => {
   // $(document).on('click', ".show-link", function(e) { //not sure how to build this
   //   e.preventDefault()
   //   let id = ($(this).data('id'))
-  // })
+  // })  show specific adventure, preventDefault()
 }
 
 // constructor function
 function Adventure(adventure) {
+  console.log(adventure.treks.length);
   this.id = adventure.id
   this.title = adventure.title
+  this.treks = adventure.treks
 }
 
 // prototype function
 Adventure.prototype.formatIndex = function() {
   let adventureHtml = `
-    <a href="/adventures/${this.id}"  data-id="${this.id}"
-    class="show-link"><p>${this.title}</p>
+    <p><a href="/adventures/${this.id}"  data-id="${this.id}"
+    class="show-link">${this.title}</a> - ${this.treks.length} trek(s) </p>
   `
   return adventureHtml
 }
