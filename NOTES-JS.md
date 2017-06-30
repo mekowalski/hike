@@ -1,5 +1,10 @@
 Daily Commits
 
+June 29 2017, Thursday
+- 10:18PM   moved h1 to welcome.html, mod adventure proto & const func
+- 2:39PM    /adventures/:id works but not nested, h1 still present instead of replacement
+- 9:57AM    remove controller comments, +application comments
+
 June 28 2017, Wednesday
 - 12:14PM   minor change in adventure/trek js files
 - 11:08AM   trek index url working!!
