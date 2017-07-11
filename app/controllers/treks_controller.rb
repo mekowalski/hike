@@ -13,6 +13,7 @@ class TreksController < ApplicationController
   end
 
   def create
+    binding.pry
     trek = current_hiker.treks.build(trek_params)
     trek.save
     redirect_to hiker_trek_path(current_hiker.id, trek.id)
