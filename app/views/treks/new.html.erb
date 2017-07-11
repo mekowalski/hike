@@ -19,14 +19,8 @@
   <%= f.label "Choose existing adventure or create a new adventure"%>
   <br><br>
 
-  <%= f.fields_for :adventure do |adventure| %>
-    <%= adventure.text_field :title %>
-  <% end %>
-  <%= f.collection_select :adventure_id, current_hiker.adventures, :id, :title %>
-  <!-- find option for collection_select -->
-  <!-- new return forms -->
-  <!-- figure out display notifications -->
-  <!-- readme with 4 sections -->
+  <%= f.text_field :adventure_name %>
+  <%= f.collection_select :adventure_selection, current_hiker.adventures, :id, :title, :include_blank => true %>
   <br><br>
 
   <%= f.submit %>

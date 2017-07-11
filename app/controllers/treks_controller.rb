@@ -13,7 +13,12 @@ class TreksController < ApplicationController
   end
 
   def create
-    binding.pry
+    # first check if the select was used
+    # params[adventure_attributes][name] blank
+     # then we only care about adventure_id
+    # if its fileld in
+     # then don't care about adventure selection
+
     trek = current_hiker.treks.build(trek_params)
     trek.save
     redirect_to hiker_trek_path(current_hiker.id, trek.id)
@@ -30,6 +35,6 @@ class TreksController < ApplicationController
   private
 
   def trek_params
-    params.require(:trek).permit(:name, :state, :elevation, :level, :adventure_id, :hiker_id, adventure_attributes: [:title])
+    params.require(:trek).permit(:name, :state, :elevation, :level, :hiker_id, :adventure_selection, :adventure_name)
   end
 end
