@@ -22,12 +22,12 @@ const advBindClickHandlers = () => {
     let id = $(this).attr('data-id')
     $.get(`/hikers/${id}/adventures/${id}.json`)
       .done((data) => {
-        console.log(data);
-        $('.main').html('')
-        let newAdventure = new Adventure(data)
-        let adventureHtml = newAdventure.formatShow()
-        $('.main').append(adventureHtml)
-      })
+      console.log(data);
+      $('.main').html('')
+      let newAdventure = new Adventure(data)
+      let adventureHtml = newAdventure.formatShow()
+      $('.main').append(adventureHtml)
+    })
   })
 
   // $(document).on('click', ".show-link", function(e) { //not allowing specific link to show
@@ -56,7 +56,7 @@ Adventure.prototype.formatIndex = function() {
 Adventure.prototype.formatShow = function() {
   let adventureHtml = `
     <h3>${this.title}</h3>
-    ${this.treks.map(trek => `<p>${trek.name}</p>`)}
+    ${this.treks.map(trek => `<p><a href = >${trek.name}</a></p>`)}
   `
   return adventureHtml
 }
