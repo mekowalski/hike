@@ -30,10 +30,6 @@ const advBindClickHandlers = () => {
     })
   })
 
-  // $(document).on('click', ".show-link", function(e) { //not allowing specific link to show
-  //   e.preventDefault()
-  //   let id = ($(this).data('id'))
-  // })  //show specific adventure, preventDefault()
 }
 
 // constructor function
@@ -56,7 +52,7 @@ Adventure.prototype.formatIndex = function() {
 Adventure.prototype.formatShow = function() {
   let adventureHtml = `
     <h3>${this.title}</h3>
-    ${this.treks.map(trek => `<p><a href = >${trek.name}</a></p>`)}
+    ${this.treks.map(trek => `<p><a href ="/treks/${trek.id}"</a>${trek.name}</p>`)}
   `
   return adventureHtml
 }
