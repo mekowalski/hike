@@ -1,5 +1,10 @@
 Daily Commits
 
+July 11 2017, Tuesday
+- 4:27PM    format click event, trying to build link for trek
+- 1:42PM    trek con strong params, trek#create logic, move logic to modify trek model, modify trek/new
+- 11:57PM   finish building show event, display show obj, need to solve trek/adv association
+
 June 30 2017, Friday
 - 10:36AM   working on click event for show
 
