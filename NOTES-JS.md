@@ -1,5 +1,10 @@
 Daily Commits
 
+July 12 2017, Wednesday
+- 5:41PM    minor note
+- 3:17PM    clean out comments, new comment regarding trek links
+- 12:25PM   link to trek/show works! need to build ajax for no page refresh
+
 July 11 2017, Tuesday
 - 4:27PM    format click event, trying to build link for trek
 - 1:42PM    trek con strong params, trek#create logic, move logic to modify trek model, modify trek/new
