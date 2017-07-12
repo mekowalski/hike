@@ -21,6 +21,7 @@ const advBindClickHandlers = () => {
     e.preventDefault()
     let id = $(this).attr('data-id')
     $.get(`/hikers/${id}/adventures/${id}.json`)
+    //^^ this line creates issues, how to separate 2 ids, one for adventure & trek each
       .done((data) => {
       console.log(data);
       $('.main').html('')
