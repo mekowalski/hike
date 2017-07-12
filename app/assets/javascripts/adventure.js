@@ -29,12 +29,10 @@ const advBindClickHandlers = () => {
       $('.main').append(adventureHtml)
     })
   })
-
 }
 
 // constructor function
 function Adventure(adventure) {
-  // console.log(adventure.treks.length);
   this.id = adventure.id
   this.title = adventure.title
   this.treks = adventure.treks
@@ -54,5 +52,8 @@ Adventure.prototype.formatShow = function() {
     <h3>${this.title}</h3>
     ${this.treks.map(trek => `<p><a href ="/treks/${trek.id}"</a>${trek.name}</p>`)}
   `
+  //all treks is indexed, some links work correctly, some redirect incorrectly, some do not work at all
+  //getting 404 on some links, logging XHR finish on some links, logging object on other links
+  //no consistency, not sure how to debug
   return adventureHtml
 }
