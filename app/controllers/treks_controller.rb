@@ -15,19 +15,15 @@ class TreksController < ApplicationController
   def create
     trek = current_hiker.treks.build(trek_params)
     trek.save
-    redirect_to hiker_trek_path(current_hiker.id, trek.id)
+    render json: trek
   end
 
   def show
-    # raise params.inspect
     @trek = Trek.find(params[:id])
-    # puts "my name is malind"
-
-      # binding.pry
-      # f.html
-      # f.json {render json: @trek}
-    puts @trek
-    render json: @trek
+    respond_to do |f|
+      f.html
+      f.json {render json: @trek}
+    end 
   end
 
   private

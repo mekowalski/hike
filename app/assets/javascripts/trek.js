@@ -20,6 +20,16 @@ const trekBindClickHandlers = () => {
     })
   })
   //click event for new form
+  $('#new_trek').on ('submit', function(e) {
+    e.preventDefault()
+    e.stopPropagation()
+    // console.log($(this).serialize());
+    let url = $(this).context.action
+    let data = $(this).serialize()
+    $.post(url, data, function(trek) {
+      console.log(trek);
+    })
+  })
 }
 
 // retreiving correct information & displaying properly
@@ -32,7 +42,6 @@ const showTrekHandler = () => {
     $.get('/treks/' + trekID + '.json', trek => {
       $('.main').html('')
       let newTrek = new Trek(trek)
-      debugger
       let TrekHtml = newTrek.formatShow()
       $('.main').append(TrekHtml)
     })
@@ -54,7 +63,7 @@ function Trek(trek) {
 Trek.prototype.formatIndex = function() {
   let trekHtml = `
     <a href="/treks/${this.id}"  data-id="${this.id}"
-    class="show-link trek-show"><p>${this.name}</p>
+    class="trek-show"><p>${this.name}</p>
   `
   return trekHtml
 }
