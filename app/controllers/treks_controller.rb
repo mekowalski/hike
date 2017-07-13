@@ -19,11 +19,15 @@ class TreksController < ApplicationController
   end
 
   def show
+    # raise params.inspect
     @trek = Trek.find(params[:id])
-    respond_to do |f|
-      f.html
-      f.json {render json: @trek}
-    end
+    # puts "my name is malind"
+
+      # binding.pry
+      # f.html
+      # f.json {render json: @trek}
+    puts @trek
+    render json: @trek
   end
 
   private

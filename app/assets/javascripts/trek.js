@@ -1,23 +1,42 @@
 //event listener
 $(() => {
   trekBindClickHandlers()
+  showTrekHandler()
 })
 
 const trekBindClickHandlers = () => {
   $('#all-treks').on ('click', function(e) {
     e.preventDefault()
-    let id = ($(this).data('id'))
+    // let id = ($(this).data('id'))
     history.pushState(null, null, `/treks`)
     $.get(`/treks.json`, treks => {
-      $('.main').html('<h1>All Treks</h1>')
+      $('.main').html('<h1>All Treks</h1>') //setting html to be the value in ()
       treks.forEach(trek => {
         let newTrek = new Trek(trek)
         let TrekHtml = newTrek.formatIndex()
         $('.main').append(TrekHtml)
       })
+      showTrekHandler()
     })
   })
   //click event for new form
+}
+
+// retreiving correct information & displaying properly
+// something clashing, possible routes issue, jquery file rendering something else.
+// separattion of concerns, another func handling variables, etc
+const showTrekHandler = () => {
+  $('.trek-show').on ('click', e => {
+    e.preventDefault()
+    let trekID = e.currentTarget.getAttribute("data-id")
+    $.get('/treks/' + trekID + '.json', trek => {
+      $('.main').html('')
+      let newTrek = new Trek(trek)
+      debugger
+      let TrekHtml = newTrek.formatShow()
+      $('.main').append(TrekHtml)
+    })
+  })
 }
 
 //constructor function
@@ -35,7 +54,7 @@ function Trek(trek) {
 Trek.prototype.formatIndex = function() {
   let trekHtml = `
     <a href="/treks/${this.id}"  data-id="${this.id}"
-    class="show-link"><p>${this.name}</p>
+    class="show-link trek-show"><p>${this.name}</p>
   `
   return trekHtml
 }
