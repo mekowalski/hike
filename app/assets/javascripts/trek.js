@@ -66,8 +66,8 @@ Trek.prototype.formatShow = function() {
     <h3>${this.name}</h3>
     <p>State: ${this.state}</p>
     <p>Elevation: ${this.elevation}</p>
-    <p>Level: ${this.level}</p>
-    <p>Advenuture: ${this.adventure_id.title}</p>
+    <p>Level of Difficulty: ${this.level}</p>
+    <p>Adventure: ${this.adventure_id.title}</p>
   `
   //not sure how to grab title of adventure, tried: this.adventure_id.title, this.adventure.title
   return trekHtml
