@@ -27,14 +27,14 @@ const trekBindClickHandlers = () => {
     let url = $(this).context.action
     let data = $(this).serialize()
     $.post(url, data, function(trek) {
-      console.log(trek);
+      $('.main').html(trek) //THIS WORKS! directs to newly create trek instance
+      let newTrek = new Trek(trek)
+      let TrekHtml = newTrek.formatShow()
+      $('.main').append(TrekHtml)
     })
   })
 }
 
-// retreiving correct information & displaying properly
-// something clashing, possible routes issue, jquery file rendering something else.
-// separattion of concerns, another func handling variables, etc
 const showTrekHandler = () => {
   $('.trek-show').on ('click', e => {
     e.preventDefault()
