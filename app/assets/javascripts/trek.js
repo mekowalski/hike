@@ -36,6 +36,7 @@ const showTrekHandler = () => {
     let trekID = e.currentTarget.getAttribute("data-id")
     $.get('/treks/' + trekID + '.json', trek => {
       $('.main').html('')
+      debugger
       createAndShowTrek(trek)
     })
   })
@@ -43,6 +44,7 @@ const showTrekHandler = () => {
 
 //constructor function
 function Trek(trek) {
+  // debugger
   this.id = trek.id
   this.name = trek.name
   this.state = trek.state
@@ -50,6 +52,7 @@ function Trek(trek) {
   this.level = trek.level
   this.hiker_id = trek.hiker_id
   this.adventure_id = trek.adventure_id
+  this.adventure_title = trek.adventure_title
 }
 
 // prototype function
@@ -67,7 +70,7 @@ Trek.prototype.formatShow = function() {
     <p>State: ${this.state}</p>
     <p>Elevation: ${this.elevation}</p>
     <p>Level of Difficulty: ${this.level}</p>
-    <p>Adventure: ${this.adventure_id.title}</p>
+    <p>Adventure: ${this.adventure_title}</p>
   `
   //not sure how to grab title of adventure, tried: this.adventure_id.title, this.adventure.title
   return trekHtml
