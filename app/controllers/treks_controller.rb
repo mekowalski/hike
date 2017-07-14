@@ -25,7 +25,6 @@ class TreksController < ApplicationController
       f.json {render json: @trek}
     end
   end
-
   private
 
   def trek_params
