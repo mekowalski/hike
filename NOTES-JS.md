@@ -1,5 +1,13 @@
 Daily Commits
 
+July 13 2017, Thursday
+- 8:16PM    remove space
+- 8:14PM    remove comments, modify formatShow, cannot figure out adv attribute
+- 8:00PM    +new function to DRY code
+- 7:26PM    successfully built e handler for new form & correct redirect function!!
+- 1:29PM    +event for new form, modify class, trek#create & trek#show
+- 12:36PM   +showTrekHandler func, modify trekBindClickHandler, trek#show & routes
+
 July 12 2017, Wednesday
 - 5:41PM    minor note
 - 3:17PM    clean out comments, new comment regarding trek links
