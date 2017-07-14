@@ -36,7 +36,6 @@ const showTrekHandler = () => {
     let trekID = e.currentTarget.getAttribute("data-id")
     $.get('/treks/' + trekID + '.json', trek => {
       $('.main').html('')
-      debugger
       createAndShowTrek(trek)
     })
   })
@@ -52,7 +51,7 @@ function Trek(trek) {
   this.level = trek.level
   this.hiker_id = trek.hiker_id
   this.adventure_id = trek.adventure_id
-  this.adventure_title = trek.adventure_title
+  this.adventure_title = trek.adventure.title
 }
 
 // prototype function
