@@ -23,7 +23,7 @@ const advBindClickHandlers = () => {
     $.get(`/hikers/${id}/adventures/${id}.json`)
     //^^ this line creates issues, how to separate 2 ids, one for adventure & trek each
       .done((data) => {
-      console.log(data);
+      // console.log(data);
       $('.main').html('')
       let newAdventure = new Adventure(data)
       let adventureHtml = newAdventure.formatShow()

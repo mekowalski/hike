@@ -28,9 +28,7 @@ const trekBindClickHandlers = () => {
     let data = $(this).serialize()
     $.post(url, data, function(trek) {
       $('.main').html(trek) //THIS WORKS! directs to newly create trek instance
-      let newTrek = new Trek(trek)
-      let TrekHtml = newTrek.formatShow()
-      $('.main').append(TrekHtml)
+      createAndShowTrek(trek)
     })
   })
 }
@@ -41,9 +39,7 @@ const showTrekHandler = () => {
     let trekID = e.currentTarget.getAttribute("data-id")
     $.get('/treks/' + trekID + '.json', trek => {
       $('.main').html('')
-      let newTrek = new Trek(trek)
-      let TrekHtml = newTrek.formatShow()
-      $('.main').append(TrekHtml)
+      createAndShowTrek(trek)
     })
   })
 }
@@ -78,4 +74,10 @@ Trek.prototype.formatShow = function() {
     <p>${this.adventure_id}</p>
   `
   return trekHtml
+}
+
+function createAndShowTrek(trek) {
+  let newTrek = new Trek(trek)
+  let TrekHtml = newTrek.formatShow()
+  $('.main').append(TrekHtml)
 }
