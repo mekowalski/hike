@@ -21,9 +21,7 @@ const advBindClickHandlers = () => {
     e.preventDefault()
     let id = $(this).attr('data-id')
     $.get(`/hikers/${id}/adventures/${id}.json`)
-    //^^ this line creates issues, how to separate 2 ids, one for adventure & trek each
       .done((data) => {
-      // console.log(data);
       $('.main').html('')
       let newAdventure = new Adventure(data)
       let adventureHtml = newAdventure.formatShow()
@@ -53,8 +51,5 @@ Adventure.prototype.formatShow = function() {
     <h3>${this.title}</h3>
     ${this.treks.map(trek => `<p><a href ="/treks/${trek.id}"</a>${trek.name}</p>`)}
   `
-  //all treks is indexed, some links work correctly, some redirect incorrectly, some do not work at all
-  //getting 404 on some links, logging XHR finish on some links, logging object on other links
-  //no consistency, not sure how to debug
   return adventureHtml
 }

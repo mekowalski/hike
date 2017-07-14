@@ -7,10 +7,9 @@ $(() => {
 const trekBindClickHandlers = () => {
   $('#all-treks').on ('click', function(e) {
     e.preventDefault()
-    // let id = ($(this).data('id'))
     history.pushState(null, null, `/treks`)
     $.get(`/treks.json`, treks => {
-      $('.main').html('<h1>All Treks</h1>') //setting html to be the value in ()
+      $('.main').html('<h1>All Treks</h1>')
       treks.forEach(trek => {
         let newTrek = new Trek(trek)
         let TrekHtml = newTrek.formatIndex()
@@ -19,15 +18,13 @@ const trekBindClickHandlers = () => {
       showTrekHandler()
     })
   })
-  //click event for new form
   $('#new_trek').on ('submit', function(e) {
     e.preventDefault()
     e.stopPropagation()
-    // console.log($(this).serialize());
     let url = $(this).context.action
     let data = $(this).serialize()
     $.post(url, data, function(trek) {
-      $('.main').html(trek) //THIS WORKS! directs to newly create trek instance
+      $('.main').html(trek)
       createAndShowTrek(trek)
     })
   })
@@ -67,12 +64,12 @@ Trek.prototype.formatIndex = function() {
 Trek.prototype.formatShow = function() {
   let trekHtml = `
     <h3>${this.name}</h3>
-    <p>${this.state}</p>
-    <p>${this.elevation}</p>
-    <p>${this.level}</p>
-    <p>${this.hiker_id}</p>
-    <p>${this.adventure_id}</p>
+    <p>State: ${this.state}</p>
+    <p>Elevation: ${this.elevation}</p>
+    <p>Level: ${this.level}</p>
+    <p>Advenuture: ${this.adventure_id.title}</p>
   `
+  //not sure how to grab title of adventure, tried: this.adventure_id.title, this.adventure.title
   return trekHtml
 }
 
