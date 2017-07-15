@@ -1,5 +1,11 @@
 Daily Commits
 
+July 14 2017, Friday
+- 6:08PM    retreive association correctly, remove comments
+- 1:32PM    +trek serializer, remove #adventure_title, modify trek.js constructor
+- 1:17PM    working with adv association for trek
+- 11:48AM   still working on adv attr display, need to figure out grouping association
+
 July 13 2017, Thursday
 - 8:16PM    remove space
 - 8:14PM    remove comments, modify formatShow, cannot figure out adv attribute
