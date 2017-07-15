@@ -43,7 +43,6 @@ const showTrekHandler = () => {
 
 //constructor function
 function Trek(trek) {
-  // debugger
   this.id = trek.id
   this.name = trek.name
   this.state = trek.state
@@ -71,7 +70,6 @@ Trek.prototype.formatShow = function() {
     <p>Level of Difficulty: ${this.level}</p>
     <p>Adventure: ${this.adventure_title}</p>
   `
-  //not sure how to grab title of adventure, tried: this.adventure_id.title, this.adventure.title
   return trekHtml
 }
 
