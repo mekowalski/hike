@@ -65,9 +65,9 @@
       <ul class="nav navbar-nav">
         <% if current_hiker %>
         <li><%= link_to "View Your Profile", hiker_path(current_hiker.id), class: "nav-links", data: {id: current_hiker.id} %></li>
-        <li><%= link_to "All Adventures", hiker_adventures_path(current_hiker.id), id: "all-adventures", class: "nav-links", data: {id: current_hiker.id}%></li>
-        <li><%= link_to "View Treks", hiker_treks_path(current_hiker.id), id: "all-treks", class: "nav-links", data: {id: current_hiker.id} %></li>
-        <li><%= link_to "Create a new Trek!", new_hiker_trek_url(current_hiker.id), class: "nav-links", data: {id: current_hiker.id} %></li>
+        <li><%= link_to "All Adventures", adventures_path, id: "all-adventures", class: "nav-links", data: {id: current_hiker.id}%></li>
+        <li><%#= link_to "View Treks", hiker_treks_path(current_hiker.id), id: "all-treks", class: "nav-links", data: {id: current_hiker.id} %></li>
+        <li><%#= link_to "Create a new Trek!", new_hiker_trek_url(current_hiker.id), class: "nav-links", data: {id: current_hiker.id} %></li>
         <li> <a href="#"><%= notice if notice %></a></li>
         <% end %>
       </ul>
@@ -87,17 +87,7 @@
 </nav>
 
 <div class="container-fluid text-center">
-  <div class="row content">
-    <div class="col-sm-4 sidenav">
-      <div class="main">
-        <%= yield %>
-      </div>
-    </div>
-
-    <div class="col-sm-8 text-left">
-      <p><img class="resize" src="/engineer-summit.jpg"></p>
-    </div>
-  </div>
+  <%= yield %>
 </div>
 
 <footer class="container-fluid text-center">

@@ -1,0 +1,24 @@
+<div class="row content">
+  <div class="col-sm-4 sidenav">
+    <div class="main">
+      
+    </div>
+  </div>
+
+  <div class="col-sm-8 text-left">
+    <h1>New Adventure</h1>
+
+    <%= form_for(@adventure) do |f| %>
+      <p>
+        <%= f.label :title %>
+      </p>
+      <p>
+        <%= f.text_field :title %>
+      </p>
+      <p>
+        <%= f.submit %>
+      </p>
+    <% end %>
+  </div>
+</div>
+
