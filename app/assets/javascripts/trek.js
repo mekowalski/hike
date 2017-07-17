@@ -26,6 +26,8 @@ const trekBindClickHandlers = () => {
     $.post(url, data, function(trek) {
       $('.main').html(trek)
       createAndShowTrek(trek)
+      // one instance, created trek with assciation twice
+      // another instance, created trek with assocation once
     })
   })
 }
