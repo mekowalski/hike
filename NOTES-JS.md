@@ -1,5 +1,10 @@
 Daily Commits
 
+July 17 2017, Monday
+- 1:40PM    making notes on improper functions of app (js-rails-branch)
+- 4:21PM    example nested treks in adventures form (avi-refactor)
+- 4:14PM    some sample refactor (avi-refactor)
+
 July 14 2017, Friday
 - 6:08PM    retreive association correctly, remove comments
 - 1:32PM    +trek serializer, remove #adventure_title, modify trek.js constructor
