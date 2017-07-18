@@ -1,29 +1,31 @@
-<h1>What's your new trek?</h1>
-<%= form_for @trek, url: "/hikers/#{current_hiker.id}/treks" do |f| %>
-  <%= label_tag :name %>
-  <%= f.text_field :name %>
-  <br><br>
+<div class="col-sm-8 text-right">
+  <h1>What's your new trek?</h1>
+  <%= form_for(@trek) do |f| %>
+    <%= label_tag :name %>
+    <%= f.text_field :name %>
+    <br><br>
 
-  <%= label_tag :state %> abbreviation
-  <%= f.text_field :state %>
-  <br><br>
+    <%= label_tag :state %> abbreviation
+    <%= f.text_field :state %>
+    <br><br>
 
-  <%= label_tag :elevation %> in feet
-  <%= f.text_field :elevation %>
-  <br><br>
+    <%= label_tag :elevation %> in feet
+    <%= f.text_field :elevation %>
+    <br><br>
 
-  <%= label_tag :level %> of difficulty
-  <%= f.text_field :level %>
-  <br><br>
+    <%= label_tag :level %> of difficulty
+    <%= f.text_field :level %>
+    <br><br>
 
-  <%= f.label "Choose existing adventure or create a new adventure"%>
-  <br><br>
+    <%= f.label "Choose existing adventure or create a new adventure"%>
+    <br><br>
 
-  <%= f.text_field :adventure_name %>
-  <%= f.collection_select :adventure_selection, current_hiker.adventures, :id, :title, :include_blank => true %>
-  <br><br>
+    <%= f.text_field :adventure_name %>
+    <%= f.collection_select :adventure_selection, adventure_id, :id, :title, :include_blank => true %>
+    <br><br>
 
-  <%= f.submit %>
-  <br><br>
-  <%= link_to "Cancel", hiker_adventures_path(current_hiker.id) %>
-<% end %>
+    <%= f.submit %>
+    <br><br>
+    <%= link_to "Cancel", adventures_path(adventure) %>
+  <% end %>
+</div>

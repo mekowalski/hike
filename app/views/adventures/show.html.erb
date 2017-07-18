@@ -1,6 +1,10 @@
-<h1>Treks for <%= @adventure.title %></h1>
+<h1><%= @adventure.title %></h1>
+
+<%= link_to 'New Trek', new_adventure_trek_path(@adventure) %>
+
 <ul>
   <% @adventure.treks.each do |trek| %>
-  <p><%= link_to trek.name, hiker_trek_path(current_hiker.id, trek.id) %></p>
+  <p><%= link_to trek.name, adventures_trek_path(adventure.id, trek.id) %></p>
+  <p><%= trek.name %></p>
   <% end %>
 </ul>

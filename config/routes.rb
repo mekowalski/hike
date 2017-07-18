@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :hikers
 
   resources :adventures do
-    resources :treks
+    resources :treks, only: [:index, :new, :create, :show]
   end
 
   resources :sessions

@@ -1,9 +1,15 @@
 <div class="main">
-  <h1>All Treks</h1>
+  <!-- <h1>All Treks</h1> -->
 
-  <ul>
-    <% @treks.each do |trek| %>
-    <p><%= link_to trek.name, hiker_trek_path(current_hiker.id, trek.id) %></p>
+  <!-- <ul> -->
+    <!-- <% @treks.each do |trek| %>
+    <p><%#= link_to trek.name, adventures_trek_path(adventure.id, trek.id) %></p>
     <% end %>
-  </ul>
+  </ul> -->
+</div>
+
+<div class="all-treks">
+  <% @treks.each do |trek| %>
+    <p><%= link_to trek.name, adventures_trek_path(trek), class: "show-trek" %></p>
+  <% end %>
 </div>

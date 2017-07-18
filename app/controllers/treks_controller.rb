@@ -8,12 +8,12 @@ class TreksController < ApplicationController
   end
 
   def new
-    @trek = Trek.new
-    @trek.build_adventure
+    @trek = Trek.new(adventure_id: params[:adventure_id]) #keep track & assign trek to that adventure
+    # @trek.build_adventure
   end
 
   def create
-    trek = current_hiker.treks.build(trek_params)
+    trek = treks.build(trek_params)
     trek.save
     render json: trek
   end
@@ -28,6 +28,6 @@ class TreksController < ApplicationController
   private
 
   def trek_params
-    params.require(:trek).permit(:name, :state, :elevation, :level, :hiker_id, :adventure_selection, :adventure_name)
+    params.require(:trek).permit(:name, :state, :elevation, :level, :adventure_id, :adventure_selection, :adventure_name)
   end
 end
