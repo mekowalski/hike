@@ -55,13 +55,26 @@
 // }
 
 $(function() {
-  $('a.show-adventure').on('click', function(e) {
+  $('a.show-adventure', document).on('click', function(e) {
     e.preventDefault()
     $.getJSON(this.href, function(json){
       $('div.main-column').html('')
-      $('div.main-column').html('<h1>' +json.title + '</h1>')
+      var addTrekURL = `/adventures/${json.id}/treks/new`
+      $('div.main-column').html(
+        `<h1>${json.title}</h1>
+        <h2><a href=${addTrekURL}>Add Trek</a></h2>`)
+
     })
   })
-  //new form ajax
-  //also create new form for trek to associate with advenuture
+  bindCreateAdventure()
 })
+
+const bindCreateAdventure = () => {
+  $('a.create-adventure').on('click', function(e) {
+    e.preventDefault()
+    $.get(this.href, function(response) {
+      var adventureForm = $('div.text-right', response).html()
+      $('.main-column').html(adventureForm)
+    })
+  })
+}

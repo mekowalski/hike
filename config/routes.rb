@@ -15,6 +15,6 @@ Rails.application.routes.draw do
   resources :adventures do
     resources :treks
   end
-  
+
   resources :sessions
 end
