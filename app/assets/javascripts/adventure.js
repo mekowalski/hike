@@ -57,6 +57,11 @@
 $(function() {
   $('a.show-adventure').on('click', function(e) {
     e.preventDefault()
-    console.log('you clicked this');
+    $.getJSON(this.href, function(json){
+      $('div.main-column').html('')
+      $('div.main-column').html('<h1>' +json.title + '</h1>')
+    })
   })
+  //new form ajax
+  //also create new form for trek to associate with advenuture
 })

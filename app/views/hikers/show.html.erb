@@ -3,8 +3,7 @@
 <% if @hiker.adventures != nil %>
   <ul>
   <% @adventures.each do |adventure| %>
-  <p><%= link_to adventure.title, hiker_adventure_path(current_hiker.id, adventure.id) %></p>
+  <p><%= link_to adventure.title, adventure_path(adventure) %></p>
   <% end %>
   </ul>
 <% end %>
-<!-- showing duplicate adventures on user profile page -->
