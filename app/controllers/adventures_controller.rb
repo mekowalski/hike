@@ -15,6 +15,7 @@ class AdventuresController < ApplicationController
 
   def create
     @adventure = Adventure.new(adventure_params)
+    @adventure.hiker = current_hiker
     @adventure.save
     redirect_to adventures_path
   end

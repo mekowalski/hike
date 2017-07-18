@@ -1,8 +1,4 @@
 class Adventure < ApplicationRecord
+  belongs_to :hiker
   has_many :treks
-  # has_many :hikers, through: :treks
-
-  def hiker_adventure
-    self.hikers.first
-  end
 end
