@@ -1,6 +1,6 @@
 <div class="col-sm-8 text-right">
   <h1>What's your new trek?</h1>
-  <%= form_for(@trek) do |f| %>
+  <%= form_for(@trek, url: adventure_treks_path) do |f| %>
     <%= label_tag :name %>
     <%= f.text_field :name %>
     <br><br>
@@ -21,11 +21,11 @@
     <br><br>
 
     <%= f.text_field :adventure_name %>
-    <%= f.collection_select :adventure_selection, adventure_id, :id, :title, :include_blank => true %>
+    <%= f.collection_select :adventure_selection, current_hiker.adventures, :id, :title, :include_blank => true %>
     <br><br>
 
     <%= f.submit %>
     <br><br>
-    <%= link_to "Cancel", adventures_path(adventure) %>
+    <%= link_to "Cancel", adventures_path %>
   <% end %>
 </div>
