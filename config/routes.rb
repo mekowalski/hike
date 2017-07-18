@@ -10,11 +10,11 @@ Rails.application.routes.draw do
   get '/signout' => 'sessions#destroy', :as => 'signout'
   get '/auth/:provider/callback' => 'sessions#create'
 
-  resources :hikers do
+  resources :hikers
+
+  resources :adventures do
     resources :treks
-    resources :adventures
   end
-  resources :adventures #redundant but works
-  resources :treks, only: [:index, :show]
+  
   resources :sessions
 end

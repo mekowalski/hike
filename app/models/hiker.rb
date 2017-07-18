@@ -1,6 +1,6 @@
 class Hiker < ApplicationRecord
-  has_many :treks
-  has_many :adventures, through: :treks
+  has_many :adventures
+  has_many :treks, through: :adventures
 
   has_secure_password
   validates_confirmation_of :password

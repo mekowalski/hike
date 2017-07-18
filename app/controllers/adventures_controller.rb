@@ -1,6 +1,8 @@
 class AdventuresController < ApplicationController
+  before_action :login_required
+
   def index
-    @adventures = Adventure.all
+    @adventures = current_hiker.adventures
     respond_to do |f|
       f.html
       f.json {render json: @adventures}
@@ -12,9 +14,9 @@ class AdventuresController < ApplicationController
   end
 
   def create
-    @adventure = Adventure.new(params.require(:adventure).permit(:title))
+    @adventure = Adventure.new(adventure_params)
     @adventure.save
-    redirect_to hiker_adventure_path(current_hiker.id, @adventure.id)
+    redirect_to adventures_path
   end
 
   def show
@@ -24,4 +26,9 @@ class AdventuresController < ApplicationController
       f.json {render json: @adventure}
     end
   end
+
+  private
+    def adventure_params
+      params.require(:adventure).permit(:title)
+    end
 end

@@ -1,9 +1,20 @@
-<div class="main">
-  <h1>All Adventures</h1>
+<div class="row content">
+  <div class="col-sm-4 sidenav">
+    <div class="main">
+      <h1>
+        All Adventures <br>
+        <small><%= link_to "Create a new Adventure", new_adventure_path %></small>
+      </h1>
 
-  <div class="all-adventures">
-    <% @adventures.each do |adventure| %>
-      <p><%= link_to adventure.title, hiker_adventure_path(adventure.hiker_adventure.id, adventure.id) %></p>
-    <% end %>
+      <div class="all-adventures">
+        <% @adventures.each do |adventure| %>
+          <p><%= link_to adventure.title, hiker_adventure_path(adventure.hiker_adventure.id, adventure.id) %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-8 text-left">
+    <p><img class="resize" src="/engineer-summit.jpg"></p>
   </div>
 </div>
