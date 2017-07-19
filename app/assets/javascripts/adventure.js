@@ -58,12 +58,14 @@ $(function() {
   $('a.show-adventure', document).on('click', function(e) {
     e.preventDefault()
     $.getJSON(this.href, function(json){
+      // debugger
       $('div.main-column').html('')
       var addTrekURL = `/adventures/${json.id}/treks/new`
       $('div.main-column').html(
         `<h1>${json.title}</h1>
-        <h2><a href=${addTrekURL}>Add Trek</a></h2>`)
-
+        <div id=caroga></div>
+        <h2><a href=${addTrekURL} class=adv-stuff>Add Trek</a></h2>`)
+      bindCreateTrek()
     })
   })
   bindCreateAdventure()
@@ -75,6 +77,16 @@ const bindCreateAdventure = () => {
     $.get(this.href, function(response) {
       var adventureForm = $('div.text-right', response).html()
       $('.main-column').html(adventureForm)
+    })
+  })
+}
+
+const bindCreateTrek = () => {
+  $('a.adv-stuff').on('click', function(e) {
+    e.preventDefault()
+    $.get(this.href, function(response) {
+      var trekForm = $('form.new_trek', response).html()
+      $('#caroga').html(trekForm)
     })
   })
 }

@@ -82,27 +82,11 @@
 // }
 
 $(function() {
-  $('a.show-trek', document).on('click', function(e) {
+  $('a.div.main-column', document).on('click', function(e) {
     e.preventDefault()
-    $.getJSON(this.href, function(json){
-      $('div.main-column').html('')
-      // var addTrekURL = `/adventures/${json.id}/treks/new`
-      // $('div.main-column').html(
-      //   `<h1>${json.title}</h1>
-      //   <h2><a href=${addTrekURL}>Add Trek</a></h2>`)
-      bindCreateTrek()
+    alert('this happened!')
+
+    // $.getJSON(this.href, function(json){
 
     })
   })
-  // bindCreateAdventure()
-})
-
-const bindCreateTrek = () => {
-  $('a.create-trek').on('click', function(e) {
-    e.preventDefault()
-    $.get(this.href, function(response) {
-      var trekForm = $('div.text-right', response).html()
-      $('.main-column').html(trekForm)
-    })
-  })
-}
