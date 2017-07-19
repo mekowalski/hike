@@ -1,6 +1,6 @@
 class Trek < ApplicationRecord
-  belongs_to :hiker
   belongs_to :adventure
+  belongs_to :hiker
 
   def adventure_attributes=(adventure_attributes)
     if adventure_id != nil
