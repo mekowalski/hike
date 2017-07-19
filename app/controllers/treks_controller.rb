@@ -13,9 +13,10 @@ class TreksController < ApplicationController
   end
 
   def create
-    trek = treks.build(trek_params)
-    trek.save
-    render json: trek
+    @trek = Trek.new(trek_params)
+    @trek.save
+    # binding.pry
+    render json: @trek
   end
 
   def show

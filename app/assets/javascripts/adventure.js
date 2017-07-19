@@ -85,7 +85,7 @@ const bindCreateTrek = () => {
   $('a.adv-stuff').on('click', function(e) {
     e.preventDefault()
     $.get(this.href, function(response) {
-      var trekForm = $('form.new_trek', response).html()
+      var trekForm = $('form.new_trek', response)
       $('#caroga').html(trekForm)
     })
   })

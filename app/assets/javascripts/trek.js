@@ -82,7 +82,7 @@
 // }
 
 $(function() {
-  $('a.div.main-column', document).on('click', function(e) {
+  $('a.div.main-column').on('click', function(e) {
     e.preventDefault()
     alert('this happened!')
 
