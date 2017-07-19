@@ -1,5 +1,13 @@
 Daily Commits
 
+July 18 2017, Tuesday
+- 4:54PM    modify form_for trek w/ URL, collection_select & Cancel redirect
+- 4:38PM    modify trek#new & create, resources :treks, treks/index & new, adventure/show view
+- 3:07PM    rename div, modify AJAX for div.text-right, new adv bind
+- 1:37PM    successful link_to hiker profile, finish AJAX, modify adv serializer assoc
+- 1:16PM    modify adv#create, adv index view, adv model, muted adv/trek.js, fix migration, begin AJAX
+- 12:51PM   refactor UX/IX, modify resources, adv/hikers/app cons, adv/hiker models, layout/adv views
+
 July 17 2017, Monday
 - 1:40PM    making notes on improper functions of app (js-rails-branch)
 - 4:21PM    example nested treks in adventures form (avi-refactor)
