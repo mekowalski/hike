@@ -1,5 +1,14 @@
 Daily Commits
 
+July 19 2017, Wednesday
+- 6:24PM    flow of adv/index -> trek/index -> trek/show works but trek/show displays incorrect data
+- 6:05PM    modify adv/show view, clean trek controller
+- 4:53PM    finally corrected & modified trek#create & proper assoc, +new hiker_id column to treks table
+- 2:58PM    solving trek#create, modify adv/trek.js files
+- 12:32PM   trek new form replaces html, submit does nothing
+- 11:09AM   modify adv/trek.js, sessions#create & treks index view
+- 9:30AM    notes, modify path in sessions#create for oauth
+
 July 18 2017, Tuesday
 - 4:54PM    modify form_for trek w/ URL, collection_select & Cancel redirect
 - 4:38PM    modify trek#new & create, resources :treks, treks/index & new, adventure/show view
