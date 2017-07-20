@@ -1,10 +1,8 @@
 <h1><%= @adventure.title %></h1>
-
-<%= link_to 'New Trek', new_adventure_trek_path(@adventure) %>
+<h2><%= link_to 'New Trek', new_adventure_trek_path(@adventure) %></h2>
 
 <ul>
   <% @adventure.treks.each do |trek| %>
-  <p><%= link_to trek.name, adventures_trek_path(adventure.id, trek.id) %></p>
-  <p><%= trek.name %></p>
+  <p><%= link_to trek.name, adventure_treks_path(trek) %></p>
   <% end %>
 </ul>
