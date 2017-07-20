@@ -9,7 +9,7 @@
 
   <div class="all-treks">
     <% @treks.each do |trek| %>
-      <p><%= link_to trek.name, adventures_trek_path(trek), class: "show-trek" %></p>
+      <p><%= link_to trek.name, adventure_trek_path(trek), class: "show-trek" %></p>
     <% end %>
   </div>
 </div>

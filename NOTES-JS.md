@@ -7,6 +7,8 @@ WEDNESDAY 071917
 -trek/adv assoc are working BUT only with adventure_selection, some reason a new trek will not build
  under adventure link--->new trek form
 -also adventure index works but link to adventure show not
+-i think i have my adventure show/index & trek show/index all messed up
+
 -display new trek in replace of form
 -adventure link to display all treks associated on right column
 -describe AJAX to work correctly

@@ -3,6 +3,7 @@
 
 <ul>
   <% @adventure.treks.each do |trek| %>
-  <p><%= link_to trek.name, adventure_treks_path(trek) %></p>
+  <p><%= link_to trek.name, adventure_trek_path(trek) %></p>
   <% end %>
 </ul>
+<!-- iteration is working BUT href in browser elements console have unique adventures with all the same treks WTF -->
