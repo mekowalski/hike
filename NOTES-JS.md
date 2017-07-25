@@ -1,3 +1,10 @@
+TUESDAY 072517
+
+-creating a new trek from its own page returns the json of data, good but want to diaplay new trek on app instead
+-also, new trek from same page after AJAX shows json of data
+-figure out the drop-down menu part
+-i don't think associations of advs are working if i take away the selection.
+
 WEDNESDAY 071917
 
 -photo not present in very beginning of app, only welcome is ^^
