@@ -91,7 +91,7 @@ const bindCreateTrek = () => {
   })
 }
 
-const bindShowTreks = () => { //want to dispplay index of treks associated before the 'Add Trek' link
+const bindIndexTreks = () => { //want to dispplay index of treks associated before the 'Add Trek' link
   $('a.show-adventure').on('click', function(e) { //not correctly 'grabbing' the tag
     e.preventDefault()
     alert('woohoo, i did that correctly')
