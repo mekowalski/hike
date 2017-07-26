@@ -1,8 +1,11 @@
 Daily
 
+July 26 2017 Wednesday
+- 5:16PM    working on index of treks on text-right main-column
+
 July 25 2017, Tuesday
-- 12:45     building func to index associated treks in text-right main-column
-- 12:19     minor notes, modify treks#create & show actions
+- 12:45PM   building func to index associated treks in text-right main-column
+- 12:19PM   minor notes, modify treks#create & show actions
 
 July 19 2017, Wednesday
 - 6:24PM    flow of adv/index -> trek/index -> trek/show works but trek/show displays incorrect data
