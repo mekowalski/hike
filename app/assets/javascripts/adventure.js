@@ -98,7 +98,7 @@ const bindCreateTrekForm = () => {
     var id = $(this).attr('action').split('/')[1]
     // console.log($(this).attr('action'))
     const values = $(this).serialize()
-    $.post(`/adventures/${id}/treks`, values, function(data) {
+    $.post(`/adventures/${id}/treks`, function(data) {
       console.log(data);
     })
   })
