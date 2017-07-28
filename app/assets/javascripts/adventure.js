@@ -110,3 +110,5 @@ const bindIndexTreks = () => { //want to dispplay index of treks associated befo
     alert('woohoo, i did that correctly')
   })
 }
+
+//testing out push onto github
