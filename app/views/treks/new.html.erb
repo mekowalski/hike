@@ -1,6 +1,6 @@
 <div class="col-sm-8 text-right">
   <h1>What's your new trek?</h1>
-  <%= form_for(@trek, url: adventure_treks_path) do |f| %>
+  <%= form_for(@trek, url: adventure_treks_path, data: {id: @trek.id}) do |f| %>
     <%= label_tag :name %>
     <%= f.text_field :name %>
     <br><br>

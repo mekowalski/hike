@@ -66,6 +66,7 @@ $(function() {
         <div id=caroga></div>
         <h2><a href=${addTrekURL} class=adv-stuff>Add Trek</a></h2>`)
       bindCreateTrek()
+      bindCreateTrekForm()
     })
   })
   bindCreateAdventure()
@@ -87,6 +88,18 @@ const bindCreateTrek = () => {
     $.get(this.href, function(response) {
       var trekForm = $('form.new_trek', response)
       $('#caroga').html(trekForm)
+    })
+  })
+}
+
+const bindCreateTrekForm = () => {
+  $(document).on('submit', '#new_trek', function(e) {
+    e.preventDefault()
+    var id = $(this).attr('action').split('/')[1]
+    // console.log($(this).attr('action'))
+    const values = $(this).serialize()
+    $.post(`/adventures/${id}/treks`, values, function(data) {
+      console.log(data);
     })
   })
 }
