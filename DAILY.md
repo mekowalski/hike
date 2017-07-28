@@ -1,5 +1,11 @@
 Daily
 
+July 28 2017 Friday
+- 5:46PM    Merge branch 'new-js-rails' of github.com:mekowalski/hike into new-js-rails
+- 5:45PM    accident modification
+- 11:44AM   testing github push
+- 11:03AM   new notes, + bindCreateTrekShow function, modify treks/new form_for
+
 July 26 2017 Wednesday
 - 5:16PM    working on index of treks on text-right main-column
 
