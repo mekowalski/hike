@@ -96,11 +96,10 @@ const bindCreateTrekForm = () => {
   $(document).on('submit', '#new_trek', function(e) {
     e.preventDefault()
     var id = $(this).attr('action').split('/')[2]
-    // console.log($(this).attr('action').split('/'))
-    // const values = $(this).serialize()
-    // console.log(values);
     $.post(`/adventures/${id}/treks`, $(this).serialize(), function(data) {
       console.log(data);
+      $('#caroga').html('Kowalski, are you there?')
+      // var newTrekData = ('')
     })
   })
 }
@@ -111,5 +110,3 @@ const bindIndexTreks = () => { //want to dispplay index of treks associated befo
     alert('woohoo, i did that correctly')
   })
 }
-
-//testing out push onto github

@@ -1,3 +1,8 @@
+FRIDAY 080417
+-remove comments
+-build ajax for displaying new trek after creation in text-right main-column, #caroga
+-mute github oauth, oauth doesn't want to cooperate on other servers away from desktop
+
 FRIDAY 072817
 -figure out the callback url for C9
 -solve why new trek is not displaying after creation
