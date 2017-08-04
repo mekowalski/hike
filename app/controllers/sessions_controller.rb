@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+    # binding.pry
     hiker = Hiker.find_by(email: params[:email])
     if hiker && hiker.authenticate(params[:password])
       session[:hiker_id] = hiker.id

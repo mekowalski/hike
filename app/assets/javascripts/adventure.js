@@ -95,10 +95,11 @@ const bindCreateTrek = () => {
 const bindCreateTrekForm = () => {
   $(document).on('submit', '#new_trek', function(e) {
     e.preventDefault()
-    var id = $(this).attr('action').split('/')[1]
-    // console.log($(this).attr('action'))
-    const values = $(this).serialize()
-    $.post(`/adventures/${id}/treks`, function(data) {
+    var id = $(this).attr('action').split('/')[2]
+    // console.log($(this).attr('action').split('/'))
+    // const values = $(this).serialize()
+    // console.log(values);
+    $.post(`/adventures/${id}/treks`, $(this).serialize(), function(data) {
       console.log(data);
     })
   })
