@@ -17,12 +17,12 @@
     <%= f.text_field :level %>
     <br><br>
 
-    <%= f.label "Choose existing adventure or create a new adventure"%>
-    <br><br>
+    <%#= f.label "Choose existing adventure or create a new adventure"%>
+    <!-- <br><br> -->
 
-    <%= f.text_field :adventure_name %>
-    <%= f.collection_select :adventure_selection, current_hiker.adventures, :id, :title, :include_blank => true %>
-    <br><br>
+    <%#= f.text_field :adventure_name %>
+    <%#= f.collection_select :adventure_selection, current_hiker.adventures, :id, :title, :include_blank => true %>
+    <!-- <br><br> -->
 
     <%= f.submit %>
     <br><br>

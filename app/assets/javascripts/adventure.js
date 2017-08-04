@@ -58,7 +58,6 @@ $(function() {
   $('a.show-adventure', document).on('click', function(e) {
     e.preventDefault()
     $.getJSON(this.href, function(json){
-      // debugger
       $('div.main-column').html('')
       var addTrekURL = `/adventures/${json.id}/treks/new`
       $('div.main-column').html(
