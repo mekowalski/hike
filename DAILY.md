@@ -1,5 +1,10 @@
 Daily
 
+August 4 2017 Friday
+- 4:30PM    removed choose/create adv option, trek successfully created w/ adv assoc
+- 3:31PM    finally working on submit handler, example string works, new notes for js
+- 1:14PM    resolved issue with adventure assoc, working on display of new trek
+
 July 28 2017 Friday
 - 5:46PM    Merge branch 'new-js-rails' of github.com:mekowalski/hike into new-js-rails
 - 5:45PM    accident modification
