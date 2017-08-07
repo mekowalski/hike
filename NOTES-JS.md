@@ -1,3 +1,8 @@
+MONDAY 080717
+-work on displaying new trek after creation
+-mute gh oauth
+-remove comments
+
 FRIDAY 080417
 -remove comments
 -build ajax for displaying new trek after creation in text-right main-column, #caroga
