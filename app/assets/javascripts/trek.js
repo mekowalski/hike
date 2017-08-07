@@ -81,12 +81,12 @@
 //   $('.main').append(TrekHtml)
 // }
 
-$(function() {
-  $('a.div.main-column').on('click', function(e) {
-    e.preventDefault()
-    alert('this happened!')
+// $(function() {
+//   $('a.div.main-column').on('click', function(e) {
+//     e.preventDefault()
+//     alert('this happened!')
 
     // $.getJSON(this.href, function(json){
-
-    })
-  })
+  //
+  //   })
+  // })
