@@ -24,10 +24,10 @@ class TreksController < ApplicationController
 
   def show
     @trek = Trek.find(params[:id])
-    # respond_to do |f|
-    #   f.html
-    #   f.json {render json: @trek}
-    # end
+    respond_to do |f|
+      f.html
+      f.json {render json: @trek}
+    end
   end
   private
 

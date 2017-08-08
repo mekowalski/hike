@@ -96,8 +96,10 @@ const bindCreateTrekForm = () => {
     e.preventDefault()
     var id = $(this).attr('action').split('/')[2]
     $.post(`/adventures/${id}/treks`, $(this).serialize(), function(data) {
-      console.log(data);
-      $('#caroga').html('Kowalski, are you there?')
+      console.log(data); //works
+      var newTrek = data
+      $('#caroga').html(newTrek) //works
+
       // var newTrekData = ('')
     })
   })
