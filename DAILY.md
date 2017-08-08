@@ -1,5 +1,9 @@
 Daily
 
+August 7 2017 Monday
+- 3:50PM    removing comments, muted signin via gh oauth & trek.js
+- 1:32PM    new notes
+
 August 4 2017 Friday
 - 4:30PM    removed choose/create adv option, trek successfully created w/ adv assoc
 - 3:31PM    finally working on submit handler, example string works, new notes for js
