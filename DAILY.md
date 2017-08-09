@@ -1,5 +1,8 @@
 Daily
 
+August 8 2017 Tuesday
+- 11:44AM    still working on post request display, unmuted respond_to in #show
+
 August 7 2017 Monday
 - 3:50PM    removing comments, muted signin via gh oauth & trek.js
 - 1:32PM    new notes
