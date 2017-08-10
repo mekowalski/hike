@@ -1,5 +1,8 @@
 Daily
 
+August 9 2017 Wednesday
+- 8:51PM     still working on displaying new data, format added
+
 August 8 2017 Tuesday
 - 11:44AM    still working on post request display, unmuted respond_to in #show
 
