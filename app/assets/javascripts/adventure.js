@@ -65,11 +65,11 @@ $(function() {
         <div id=caroga></div>
         <h2><a href=${addTrekURL} class=adv-stuff>Add Trek</a></h2>`)
       bindCreateTrek()
-      bindCreateTrekForm()
     })
   })
   bindCreateAdventure()
 })
+
 
 const bindCreateAdventure = () => {
   $('a.create-adventure').on('click', function(e) {
@@ -87,26 +87,27 @@ const bindCreateTrek = () => {
     $.get(this.href, function(response) {
       var trekForm = $('form.new_trek', response)
       $('#caroga').html(trekForm)
+      bindCreateTrekForm()
     })
   })
 }
 
 const bindCreateTrekForm = () => {
-  $(document).on('submit', '#new_trek', function(e) {
+  $('#new_trek').on('submit', function(e) { //select id i want, no need to select document
     e.preventDefault()
-    var id = $(this).attr('action').split('/')[2]
+    var id = parseInt($(this).attr('action').split('/')[2]) //need interger for post route
     $.post(`/adventures/${id}/treks`, $(this).serialize(), function(data) {
       console.log(data); //works
-      var newTrek = data
-      $('#caroga').html(newTrek) //data does not yet show up, only the phrase in string was present after submit
-
       // display data in this format
       var trekName = '<p>Name: ' + data.name + '</p>';
       var trekState = '<p>State: ' + data.state + '</p>';
       var trekElevation = '<p>Elevation: ' + data.elevation + ' feet</p>';
-      var trekDifficulty = '<p>Difficulty Level: ' + data.level + '</p>';
+      var trekLevel = '<p>Difficulty Level: ' + data.level + '</p>';
 
-      // var newTrekData = ('')
+      var newTrek = trekName + trekState + trekElevation + trekLevel
+
+      $('#caroga').html(newTrek)
+
     })
   })
 }
