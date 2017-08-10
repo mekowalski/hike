@@ -98,7 +98,13 @@ const bindCreateTrekForm = () => {
     $.post(`/adventures/${id}/treks`, $(this).serialize(), function(data) {
       console.log(data); //works
       var newTrek = data
-      $('#caroga').html(newTrek) //works
+      $('#caroga').html(newTrek) //data does not yet show up, only the phrase in string was present after submit
+
+      // display data in this format
+      var trekName = '<p>Name: ' + data.name + '</p>';
+      var trekState = '<p>State: ' + data.state + '</p>';
+      var trekElevation = '<p>Elevation: ' + data.elevation + ' feet</p>';
+      var trekDifficulty = '<p>Difficulty Level: ' + data.level + '</p>';
 
       // var newTrekData = ('')
     })
