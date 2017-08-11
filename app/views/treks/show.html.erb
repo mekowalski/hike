@@ -5,4 +5,6 @@
 <p>Level of Difficulty: <%= @trek.level %></p>
 <p>Adventure: <%= @trek.adventure.title %></p>
 
-<p><%= link_to @trek.hiker.name || @trek.hiker.email, hiker_path(@trek.hiker.id) %> has done this trek</p>
+<!-- <p><%#= link_to @trek.hiker.name || @trek.hiker.email, hiker_path(@trek.hiker.id) %> has done this trek</p> -->
+<!-- currently the app is designed with current user in mind
+no point in offering link_to another user's profile for adv & treks -->

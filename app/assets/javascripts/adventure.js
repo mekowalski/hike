@@ -93,21 +93,16 @@ const bindCreateTrek = () => {
 }
 
 const bindCreateTrekForm = () => {
-  $('#new_trek').on('submit', function(e) { //select id i want, no need to select document
+  $('#new_trek').on('submit', function(e) {
     e.preventDefault()
-    var id = parseInt($(this).attr('action').split('/')[2]) //need interger for post route
+    var id = parseInt($(this).attr('action').split('/')[2])
     $.post(`/adventures/${id}/treks`, $(this).serialize(), function(data) {
-      console.log(data); //works
-      // display data in this format
-      var trekName = '<p>Name: ' + data.name + '</p>';
-      var trekState = '<p>State: ' + data.state + '</p>';
-      var trekElevation = '<p>Elevation: ' + data.elevation + ' feet</p>';
-      var trekLevel = '<p>Difficulty Level: ' + data.level + '</p>';
-
+      var trekName = '<h2>Name: ' + data.name + '</h2>'
+      var trekState = '<h2>State: ' + data.state + '</h2>'
+      var trekElevation = '<h2>Elevation: ' + data.elevation + ' feet</h2>'
+      var trekLevel = '<h2>Difficulty Level: ' + data.level + '</h2>'
       var newTrek = trekName + trekState + trekElevation + trekLevel
-
       $('#caroga').html(newTrek)
-
     })
   })
 }
