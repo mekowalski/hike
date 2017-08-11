@@ -1,5 +1,9 @@
 Daily
 
+August 10 2017 Thursday
+- 9:22PM     modify bindCreateTrekForm, mute gh oauth & link_to other user profiles
+- 4:52PM     fianlly built successful form data display!
+
 August 9 2017 Wednesday
 - 8:51PM     still working on displaying new data, format added
 
