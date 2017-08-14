@@ -1,6 +1,7 @@
 class TreksController < ApplicationController
   def index
-    @treks = Trek.all
+    @adventure = Adventure.find_by_id(params[:adventure_id])
+    @treks = @adventure.treks
     respond_to do |f|
       f.html
       f.json {render json: @treks}
