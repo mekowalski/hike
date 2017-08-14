@@ -108,12 +108,15 @@ const bindCreateTrekForm = () => {
   })
 }
 
-const bindIndexTreks = () => { //want to dispplay index of treks associated before the 'Add Trek' link
-  $('a.adv-link').on('click', function(e) { //not correctly 'grabbing' the tag
+const bindIndexTreks = () => {
+  $('a.adv-link').on('click', function(e) {
     e.preventDefault()
-    // alert('woohoo, i did that correctly')
     let id = $(this).data('id')
-    console.log(id); //correctly logs adventure id
+    $.get(`/adventures/${id}/treks.json`, function(data) {
+      console.log(data);  //correctly logs all treks assoc w/ adv
+      // var trekIndex =
+      // $('div.index').html(trekIndex)
 
+    })
   })
 }

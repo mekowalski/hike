@@ -1,9 +1,11 @@
 <h1><%= @hiker.name || @hiker.email %>'s Adventures</h1>
 
 <% if @hiker.adventures != nil %>
-  <ul>
-  <% @adventures.each do |adventure| %>
-  <p><%= link_to adventure.title, adventure_path(adventure), class: 'adv-link', data: {id: adventure.id} %></p>
-  <% end %>
-  </ul>
+  <div class="index">
+    <ul>
+      <% @adventures.each do |adventure| %>
+      <p><%= link_to adventure.title, adventure_path(adventure), class: 'adv-link', data: {id: adventure.id} %></p>
+      <% end %>
+    </ul>
+  </div>
 <% end %>
