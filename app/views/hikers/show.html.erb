@@ -3,7 +3,7 @@
 <% if @hiker.adventures != nil %>
   <ul>
   <% @adventures.each do |adventure| %>
-  <p><%= link_to adventure.title, adventure_path(adventure) %></p>
+  <p><%= link_to adventure.title, adventure_path(adventure), class: 'adv-link' %></p>
   <% end %>
   </ul>
 <% end %>

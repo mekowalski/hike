@@ -55,6 +55,7 @@
 // }
 
 $(function() {
+  bindIndexTreks()
   $('a.show-adventure', document).on('click', function(e) {
     e.preventDefault()
     $.getJSON(this.href, function(json){
@@ -108,7 +109,7 @@ const bindCreateTrekForm = () => {
 }
 
 const bindIndexTreks = () => { //want to dispplay index of treks associated before the 'Add Trek' link
-  $('a.show-adventure').on('click', function(e) { //not correctly 'grabbing' the tag
+  $('a.adv-link').on('click', function(e) { //not correctly 'grabbing' the tag
     e.preventDefault()
     alert('woohoo, i did that correctly')
   })
