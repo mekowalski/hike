@@ -1,5 +1,12 @@
 Daily
 
+August 14 2017 Monday
+- 4:25PM     finally able to iterate over treks, need to still obtain name
+- 3:30PM     minor note
+- 1:35OM     now trying to obtain attr for trek name, +div in hiker/show, -respond_to in trek#index
+- 11:34AM    building index treks bind, finding correct adventure id
+- 11:10AM    alert finally working, building index trek bind
+
 August 10 2017 Thursday
 - 9:22PM     modify bindCreateTrekForm, mute gh oauth & link_to other user profiles
 - 4:52PM     fianlly built successful form data display!
