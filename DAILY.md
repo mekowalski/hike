@@ -1,5 +1,8 @@
 Daily
 
+August 15 2017 Tuesday
+- 2:19PM     +notes-js, still building trekIndex
+
 August 14 2017 Monday
 - 4:25PM     finally able to iterate over treks, need to still obtain name
 - 3:30PM     minor note
