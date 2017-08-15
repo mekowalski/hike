@@ -1,3 +1,11 @@
+TUESDAY 081517
+-need to grab name attr from trek
+-index names of treks associated with adventures
+-get rid of comments, possibly keep adv/trek.js comments in file
+-possibly delete trek.js file, all code is in adv.js
+-possibly do video demo
+-possibly write blog post
+
 MONDAY 080717
 -work on displaying new trek after creation
 -mute gh oauth
