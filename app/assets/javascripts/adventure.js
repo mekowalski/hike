@@ -113,19 +113,19 @@ const bindIndexTreks = () => {
     e.preventDefault()
     let id = $(this).data('id')
     $.get(`/adventures/${id}/treks.json`, function(data) {
-      // console.log(data);  //correctly logs all treks assoc w/ adv, array of objects
       $('.index').html("")
       data.forEach(function(trek){
-        // console.log(trek)
-        // var trekIndex =
         var adventureId = trek.adventure.id
         var trekIndex = "<p><a data-id='"+ trek.id +"' class='show-trek' href='/adventures/" + adventureId + "/treks/" + trek.id + "'>" + trek.name + "</a></p>"
-        // ^class for this link, then create show event
-        // prevent default for show trek
-        // clear dom and replace
         $('.index').append(trekIndex)
-        // append will show all associated treks
       })
     })
+  })
+}
+
+const bindShowTrek = () => {
+  $(document).on('click', 'a.show-trek', function(e) {
+    e.preventDefault()
+    alert('this was clicked')
   })
 }
