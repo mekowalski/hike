@@ -113,10 +113,13 @@ const bindIndexTreks = () => {
     e.preventDefault()
     let id = $(this).data('id')
     $.get(`/adventures/${id}/treks.json`, function(data) {
+      // console.log(data);  //correctly logs all treks assoc w/ adv, array of objects
       data.forEach(function(trek){
         console.log(trek)
         // var trekIndex =
-        // $('div.index').html(trekIndex)
+        var adventureId = trek.adventure.id
+        var trekIndex = "<p><a href='/adventures/" + adventureId + "/treks/" + trek.id + "'>" + trek.name + "</a></p>"
+        $('.index').html(trekIndex)
       })
     })
   })
