@@ -16,6 +16,8 @@ class SessionsController < ApplicationController
       hiker.nil? ? (flash[:error] = 'User not found') : (flash[:error] = 'Invalid password')
       render "new"
     end
+    # session[:hiker_id] = nil
+    # was relying on hiker_id, session found but not created yet
   end
 
   def destroy
