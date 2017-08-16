@@ -113,17 +113,10 @@ const bindIndexTreks = () => {
     e.preventDefault()
     let id = $(this).data('id')
     $.get(`/adventures/${id}/treks.json`, function(data) {
-      // console.log(data);  //correctly logs all treks assoc w/ adv, array of objects
       data.forEach(function(trek){
         console.log(trek)
         // var trekIndex =
         // $('div.index').html(trekIndex)
-        // var x = document.getElementsByTagName("H1")[0].getAttribute("class")
-        // ^this grabs value of class attr in h1 tag, nvm
-        // var a = document.getElementById('hey')
-        // a.getAttribute('href')
-        // a.href
-        // ^same as previous, doesn't help me grab attr from console
       })
     })
   })
