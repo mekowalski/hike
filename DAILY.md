@@ -1,5 +1,12 @@
 Daily
 
+August 16 2017 Wednesday
+- 4:53PM     remove comments, +bindShowTrek although alert is not working
+- 4:21PM     assoc treks now append html, +class & data-id for trekIndex ahref
+- 4:06PM     trek still not showing as replacement
+- 2:02PM     remove comments
+- 1:33PM     sessions was fickle, had to try setting it to nil to clear session
+
 August 15 2017 Tuesday
 - 2:19PM     +notes-js, still building trekIndex
 
