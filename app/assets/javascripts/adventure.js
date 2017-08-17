@@ -56,6 +56,7 @@
 
 $(function() {
   bindIndexTreks()
+  bindShowTrek()
   $('a.show-adventure', document).on('click', function(e) {
     e.preventDefault()
     $.getJSON(this.href, function(json){
@@ -126,6 +127,11 @@ const bindIndexTreks = () => {
 const bindShowTrek = () => {
   $(document).on('click', 'a.show-trek', function(e) {
     e.preventDefault()
-    alert('this was clicked')
+    // alert('this was clicked') // worked!!!
+    let adventureId = adventure.id // grab adv id for url
+    let id = $(this).data('data-id') // grab id of trek
+    $.get(`adventures/${adventureId}/treks/${id}.json`, function(data) {
+      console.log(data);
+    })
   })
 }
