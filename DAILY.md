@@ -1,5 +1,8 @@
 Daily
 
+August 17 2017 Thursday
+- 12:34PM    call bindShowTrek in main func, building get req for trek show, adv-id & trek-id
+
 August 16 2017 Wednesday
 - 4:53PM     remove comments, +bindShowTrek although alert is not working
 - 4:21PM     assoc treks now append html, +class & data-id for trekIndex ahref
