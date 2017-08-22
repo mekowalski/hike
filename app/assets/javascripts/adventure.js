@@ -127,12 +127,12 @@ const bindIndexTreks = () => {
 const bindShowTrek = () => {
   $(document).on('click', 'a.show-trek', function(e) {
     e.preventDefault()
-    debugger
+    // debugger
     // alert('this was clicked') // worked!!!
     let adventureId = adventure.id
     // adventure.id, adventure not defined
     // adventure_id not defined
-    let id = $(this).data('data-id') // grab id of trek
+    let id = $(this).data('id') // grab id of trek, in console 'id' grabs trek id
     $.get(`adventures/${adventureId}/treks/${id}.json`, function(data) {
       console.log(data);
     })
