@@ -1,5 +1,8 @@
 Daily
 
+August 21 2017 Monday
+- 5:13PM     still working on trek show
+
 August 17 2017 Thursday
 - 12:34PM    call bindShowTrek in main func, building get req for trek show, adv-id & trek-id
 
