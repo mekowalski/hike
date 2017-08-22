@@ -4,7 +4,7 @@
   <div class="index">
     <ul>
       <% @adventures.each do |adventure| %>
-      <p><%= link_to adventure.title, adventure_path(adventure), class: 'adv-link', data: {id: adventure.id} %></p>
+      <h1><%= link_to adventure.title, adventure_path(adventure), class: 'adv-link', data: {id: adventure.id} %></h1>
       <% end %>
     </ul>
   </div>

@@ -127,12 +127,15 @@ const bindIndexTreks = () => {
 const bindShowTrek = () => {
   $(document).on('click', 'a.show-trek', function(e) {
     e.preventDefault()
-    // debugger
-    // alert('this was clicked') // worked!!!
-    let adventureId = $(this).data('adventureId') // AWW YISSSS. FREAKING FINALLY!
-    let id = $(this).data('id') // grab id of trek, in console 'id' grabs trek id
+    let adventureId = $(this).data('adventureId')
+    let id = $(this).data('id')
     $.get(`/adventures/${adventureId}/treks/${id}.json`, function(data) {
-      console.log(data); // AWW YISSSS. FREAKING FINALLY!
+      var trekName = '<h2>Name: ' + data.name + '</h2>'
+      var trekState = '<h2>State: ' + data.state + '</h2>'
+      var trekElevation = '<h2>Elevation: ' + data.elevation + ' feet</h2>'
+      var trekLevel = '<h2>Difficulty Level: ' + data.level + '</h2>'
+      var newTrek = trekName + trekState + trekElevation + trekLevel
+      $('.index').html(newTrek)
     })
   })
 }
