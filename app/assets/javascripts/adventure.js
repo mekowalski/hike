@@ -117,7 +117,7 @@ const bindIndexTreks = () => {
       $('.index').html("")
       data.forEach(function(trek){
         var adventureId = trek.adventure.id
-        var trekIndex = "<p><a data-id='"+ trek.id +"' class='show-trek' href='/adventures/" + adventureId + "/treks/" + trek.id + "'>" + trek.name + "</a></p>"
+        var trekIndex = "<p><a data-adventure-id='"+ adventureId +"' data-id='"+ trek.id +"' class='show-trek' href='/adventures/" + adventureId + "/treks/" + trek.id + "'>" + trek.name + "</a></p>"
         $('.index').append(trekIndex)
       })
     })
@@ -129,12 +129,10 @@ const bindShowTrek = () => {
     e.preventDefault()
     // debugger
     // alert('this was clicked') // worked!!!
-    let adventureId = adventure.id
-    // adventure.id, adventure not defined
-    // adventure_id not defined
+    let adventureId = $(this).data('adventureId') // AWW YISSSS. FREAKING FINALLY!
     let id = $(this).data('id') // grab id of trek, in console 'id' grabs trek id
-    $.get(`adventures/${adventureId}/treks/${id}.json`, function(data) {
-      console.log(data);
+    $.get(`/adventures/${adventureId}/treks/${id}.json`, function(data) {
+      console.log(data); // AWW YISSSS. FREAKING FINALLY!
     })
   })
 }
