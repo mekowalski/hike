@@ -1,5 +1,10 @@
 Daily
 
+August 22 2017 Tuesday
+- 2:42PM     present trek info on show page
+- 2:25PM     trek data show finally in json format!
+- 10:55AM    remove comments, still working on trek show function
+
 August 21 2017 Monday
 - 5:13PM     still working on trek show
 
