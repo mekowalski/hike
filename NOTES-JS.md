@@ -1,3 +1,8 @@
+MONDAY 082817
+-good things take time
+-finished recording video demo for project
+-onto project blog post
+
 TUESDAY 081517
 -need to grab name attr from trek
 -index names of treks associated with adventures
