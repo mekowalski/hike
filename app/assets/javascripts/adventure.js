@@ -16,7 +16,6 @@ $(function() {
   bindCreateAdventure()
 })
 
-
 const bindCreateAdventure = () => {
   $('a.create-adventure').on('click', function(e) {
     e.preventDefault()
