@@ -66,8 +66,6 @@
         <% if current_hiker %>
         <li><%= link_to "View Your Profile", hiker_path(current_hiker.id), class: "nav-links", data: {id: current_hiker.id} %></li>
         <li><%= link_to "All Adventures", adventures_path, id: "all-adventures", class: "nav-links", data: {id: current_hiker.id}%></li>
-        <li><%#= link_to "View Treks", hiker_treks_path(current_hiker.id), id: "all-treks", class: "nav-links", data: {id: current_hiker.id} %></li>
-        <li><%#= link_to "Create a new Trek!", new_hiker_trek_url(current_hiker.id), class: "nav-links", data: {id: current_hiker.id} %></li>
         <li> <a href="#"><%= notice if notice %></a></li>
         <% end %>
       </ul>
@@ -78,7 +76,6 @@
         <% else %>
         <li><%= link_to "Sign In", signin_path, class: "nav-links" %></li>
         <li><%= link_to "Sign Up", signup_path, class: "nav-links" %></li>
-        <li><%#= link_to "Sign in with Github", "/auth/github", class: "nav-links" %></li>
         <% end %>
       </ul>
     </div>
