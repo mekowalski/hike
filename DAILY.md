@@ -1,5 +1,12 @@
 Daily
 
+August 28 2017 Monday
+- 5:40PM     js notes
+- 12:13PM    js notes for the day
+- 11:25AM    minor detail change
+- 10:22AM    remove comments in application & treks new view, +photo in welcome view
+- 10:10AM    remove adventure.js comments, delete trek.js, modify sessions#create
+
 August 22 2017 Tuesday
 - 2:42PM     present trek info on show page
 - 2:25PM     trek data show finally in json format!
