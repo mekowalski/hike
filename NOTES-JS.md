@@ -2,6 +2,7 @@ MONDAY 082817
 -good things take time
 -finished recording video demo for project
 -onto project blog post
+-DEMO AND POST DONE! PROJECT IS DANG SUBMITTED
 
 TUESDAY 081517
 -need to grab name attr from trek
