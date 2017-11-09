@@ -1,5 +1,8 @@
 Daily
 
+November 9 2017 Thursday
+- 9:55AM     modified some LOCs to ES6 and PASSED ASSESSMENT!!!!
+
 August 28 2017 Monday
 - 5:40PM     js notes
 - 12:13PM    js notes for the day
