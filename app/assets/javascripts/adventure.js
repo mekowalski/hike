@@ -6,10 +6,11 @@ $(function() {
     $.getJSON(this.href, function(json){
       $('div.main-column').html('')
       var addTrekURL = `/adventures/${json.id}/treks/new`
-      $('div.main-column').html(
-        `<h1>${json.title}</h1>
+      $('div.main-column').html(`
+        <h1>${json.title}</h1>
         <div id=caroga></div>
-        <h2><a href=${addTrekURL} class=adv-stuff>Add Trek</a></h2>`)
+        <h2><a href=${addTrekURL} class=adv-stuff>Add Trek</a></h2>
+        `)
       bindCreateTrek()
     })
   })
@@ -58,11 +59,23 @@ const bindIndexTreks = () => {
     let id = $(this).data('id')
     $.get(`/adventures/${id}/treks.json`, function(data) {
       $('.index').html("")
-      data.forEach(function(trek){
-        var adventureId = trek.adventure.id
-        var trekIndex = "<p><a data-adventure-id='"+ adventureId +"' data-id='"+ trek.id +"' class='show-trek' href='/adventures/" + adventureId + "/treks/" + trek.id + "'>" + trek.name + "</a></p>"
-        $('.index').append(trekIndex)
-      })
+      data
+        .sort((a, b) => a.name < b.name)
+        .forEach((trek) => {
+          const trekIndex = `
+            <p>
+              <a
+                data-adventure-id="${trek.adventure.id}"
+                data-id=${trek.id}
+                class='show-trek'
+                href='/adventures/${trek.adventure.id}/treks/${trek.id}'
+              >
+                ${trek.name}
+              </a>
+            </p>
+          `
+          $('.index').append(trekIndex)
+        })
     })
   })
 }
@@ -70,15 +83,15 @@ const bindIndexTreks = () => {
 const bindShowTrek = () => {
   $(document).on('click', 'a.show-trek', function(e) {
     e.preventDefault()
-    let adventureId = $(this).data('adventureId')
-    let id = $(this).data('id')
+    const adventureId = $(this).data('adventureId')
+    const id = $(this).data('id')
     $.get(`/adventures/${adventureId}/treks/${id}.json`, function(data) {
-      var trekName = '<h2>Name: ' + data.name + '</h2>'
-      var trekState = '<h2>State: ' + data.state + '</h2>'
-      var trekElevation = '<h2>Elevation: ' + data.elevation + ' feet</h2>'
-      var trekLevel = '<h2>Difficulty Level: ' + data.level + '</h2>'
-      var newTrek = trekName + trekState + trekElevation + trekLevel
-      $('.index').html(newTrek)
+      $('.index').html(`
+      <h2>Name: ${data.name}</h2>
+      <h2>State: ${data.state}</h2>
+      <h2>Elevation: ${data.elevation} feet</h2>
+      <h2>Difficulty Level: ${data.level}</h2>
+      `)
     })
   })
 }

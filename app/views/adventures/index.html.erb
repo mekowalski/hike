@@ -8,6 +8,7 @@
 
       <div class="all-adventures">
         <% @adventures.each do |adventure| %>
+        
           <p><%= link_to adventure.title, adventure_path(adventure), class: "show-adventure" %></p>
         <% end %>
       </div>
